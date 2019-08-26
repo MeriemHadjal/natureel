@@ -1,0 +1,47 @@
+//Mes Variables
+$background-vert: #C3D8BB;
+$background-noir: #222421;
+$text-color: #222421;
+$text-size: 14px;
+$text-titre: 20px;
+$segoe: 'Segoe UI', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//Règles Générales
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 80px;
+    font-family: $segoe;
+}
+
+#concept{
+    height: 100vh;
+    .content_title{
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        .content_trait{
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+            .trait_petit{
+                border-top: 2px black solid;
+                width: 70px;
+            }
+            .trait_grand{
+                border-top: 2px black solid;
+                width: 120px;
+            }
+        }
+    }
+
+    .content_text{
+        p{
+            padding-top: 40px;
+        }
+    }
+}

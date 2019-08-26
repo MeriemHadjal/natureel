@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#concept {
+  height: 100vh;
+}
+
+#concept .content_title {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#concept .content_title .content_trait {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#concept .content_title .content_trait .trait_petit {
+  border-top: 2px black solid;
+  width: 70px;
+}
+
+#concept .content_title .content_trait .trait_grand {
+  border-top: 2px black solid;
+  width: 120px;
+}
+
+#concept .content_text p {
+  padding-top: 40px;
+}
+/*# sourceMappingURL=style.css.map */
