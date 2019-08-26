@@ -9,6 +9,15 @@ header #myVideo {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -100;
+}
+
+header .menu {
+  width: 90vw;
+  height: 150px;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
 }
 
 header .menu ul {
@@ -22,7 +31,7 @@ header .menu ul {
 
 header .menu ul li {
   z-index: 99;
-  margin: 0 15px 0 15px;
+  margin: 0 15px;
   list-style: none;
   font-size: 24px;
 }
@@ -30,5 +39,28 @@ header .menu ul li {
 header .menu ul li a {
   color: white;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  header .menu ul li {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

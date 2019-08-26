@@ -21,16 +21,22 @@ header {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+    z-index: -100;
   }
 
   .menu {
+    width: 90vw;
+    height: 150px;
+    // background: rgba(0, 0, 0, 0.4);
+    align-items: center !important;
+
     ul {
       display: flex;
       justify-content: flex-end;
 
       li {
         z-index: 99;
-        margin: 0 15px 0 15px;
+        margin: 0 15px;
         list-style: none;
         font-size: $text-menu;
 
@@ -38,6 +44,17 @@ header {
           color: white;
           text-decoration: none;
         }
+
+        @media screen and (max-width: 1000px) {
+          margin: 20px 0;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
       }
     }
   }
