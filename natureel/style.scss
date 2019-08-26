@@ -1,1 +1,105 @@
-$background-vert :#C3D8BB;
+// variables 
+$background-vert: #C3D8BB;
+$background-noir: #222421;
+
+$text-color-noir: #222421;
+$text-color-white: white;
+
+$text-content: 14px;
+
+$text-titre: 20px;
+
+$segoe: 'Segoe UI',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
+
+
+
+// Règles générales 
+
+section {
+    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+// Règles spécifiques 
+
+#sports {
+    background-color: $background-vert;
+
+    h2 {
+        font-family: $segoe;
+        font-weight: medium;
+        color: $text-color-white;
+        font-size: 80px;
+        text-align: left;
+    }
+
+    .content_trait {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 40px;
+
+        .trait_petit {
+            border-top: 2px white solid;
+            width: 70px;
+        }
+
+        .trait_grand {
+            border-top: 2px white solid;
+            width: 120px;
+        }
+    }
+
+    #images_sports {
+      margin-top: 6%;
+    }
+}
+
+footer {
+    background: $background-noir;
+    color: $text-color-white;
+    font-size: 17px;
+    height: 50px;
+    width: 100%;
+
+    .container {
+
+        .row {
+            
+            ul {
+                li {
+                    list-style: none;
+        
+                    a {
+                        color: white;
+        
+                        i {
+                            font-size: 25px;
+                            margin-right: 10px;
+                        }
+                    }
+        
+                    a:hover {
+                        text-decoration: none;
+                        color: grey;
+                    }
+                }
+            }
+        
+            a {
+                color: white;
+            }
+        
+            a:hover {
+                text-decoration: none;
+                color: grey;
+            }   
+
+        }
+        
+    }
+}

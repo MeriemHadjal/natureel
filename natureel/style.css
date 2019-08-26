@@ -1,1 +1,77 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+section {
+  height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#sports {
+  background-color: #C3D8BB;
+}
+
+#sports h2 {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: medium;
+  color: white;
+  font-size: 80px;
+  text-align: left;
+}
+
+#sports .content_trait {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 40px;
+}
+
+#sports .content_trait .trait_petit {
+  border-top: 2px white solid;
+  width: 70px;
+}
+
+#sports .content_trait .trait_grand {
+  border-top: 2px white solid;
+  width: 120px;
+}
+
+#sports #images_sports {
+  margin-top: 6%;
+}
+
+footer {
+  background: #222421;
+  color: white;
+  font-size: 17px;
+  height: 50px;
+  width: 100%;
+}
+
+footer .container .row ul li {
+  list-style: none;
+}
+
+footer .container .row ul li a {
+  color: white;
+}
+
+footer .container .row ul li a i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+footer .container .row ul li a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+footer .container .row a {
+  color: white;
+}
+
+footer .container .row a:hover {
+  text-decoration: none;
+  color: grey;
+}
+/*# sourceMappingURL=style.css.map */
