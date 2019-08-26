@@ -2,4 +2,33 @@
   padding: 0;
   margin: 0;
 }
+
+header #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+header .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .menu ul li {
+  z-index: 99;
+  margin: 0 15px 0 15px;
+  list-style: none;
+  font-size: 24px;
+}
+
+header .menu ul li a {
+  color: white;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */

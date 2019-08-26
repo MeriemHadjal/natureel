@@ -21,3 +21,24 @@
 </head>
 
 <body>
+
+    <header class="container-fluid">
+        <video autoplay muted loop id="myVideo">
+            <source src="wp-content/themes/natureel/assets/img/ble.mp4" type="video/mp4">
+        </video>
+
+        <!-- NAVBAR BEGINNING -->
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class=" p-4">
+                    <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+                </div>
+            </div>
+            <nav class="navbar">
+                <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fas fa-bars"></i></span>
+                </button>
+            </nav>
+        </div>
+        <!-- NAVBAR END -->
+    </header>

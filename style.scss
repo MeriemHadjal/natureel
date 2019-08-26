@@ -10,3 +10,35 @@ $background-noir: #222421;
 $text-color: #222421;
 $text-size: 14px;
 $text-titre: 20px;
+$text-menu: 24px;
+
+// HEADER BEGINNING
+
+header {
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .menu {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        z-index: 99;
+        margin: 0 15px 0 15px;
+        list-style: none;
+        font-size: $text-menu;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
