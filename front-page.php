@@ -18,7 +18,7 @@ get_header();
                 <img src="wp-content/themes/natureel/assets/img/peche.png">
             </a>
             <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
-                <img src="wp-content/themes/natureel/assets/img/equitation.png">
+                <img src="wp-content/themes/natureel/assets/img/cheval.png">
             </a>
             <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
                 <img src="wp-content/themes/natureel/assets/img/chasse.png">
