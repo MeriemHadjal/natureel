@@ -22,7 +22,7 @@
 
 <body>
 
-    <header class="container-fluid">
+    <header class="container-fluid d-flex flex-column justify-content-between">
         <video autoplay muted loop id="myVideo">
             <source src="wp-content/themes/natureel/assets/img/ble.mp4" type="video/mp4">
         </video>
@@ -30,23 +30,14 @@
         <div class="filter"></div>
 
         <!-- NAVBAR BEGINNING -->
-        <div class="header_content d-flex flex-column justify-content-between">
-            <div class="pos-f-t">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class=" p-4">
-                        <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
-                    </div>
-                </div>
-                <nav class="navbar">
-                    <button class="navbar-toggler burger" id="burger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i id="test" class="fas fa-bars"></i></span>
-                    </button>
-                </nav>
-            </div>
-            <div class="title">
-                <h1>NatuReel</h1>
-            </div>
-            <div class="btn_arrow"><i class="fas fa-angle-double-down"></i></div>
+        <div class="title d-flex justify-content-between">
+            <h1>NatuReel</h1>
+            <div class="burger"><i class="fas fa-bars"></i></div>
         </div>
+        <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+
+
+        <div class="btn_arrow"><i class="fas fa-angle-double-down"></i></div>
+       
         <!-- NAVBAR END -->
     </header>
