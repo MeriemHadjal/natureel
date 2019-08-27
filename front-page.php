@@ -37,55 +37,57 @@ get_header(); ?>
 </section>
 
 <section id="last_article" class="container-fluid pr-0 pl-0 allSlider">
-    <?php
-    $query = new WP_Query(array(
 
+<div class="container">
+    <div class="content_title">
+        <h2 class="title_concept">DERNIERS ARTICLES</h2>
+        <div class="content_trait">
+            <div class="trait_petit"></div>
+            <div class="trait_grand"></div>
+        </div>
+    </div>
+
+    <div class="row">                     
+        <?php
+        
+        $post = array(
         'post_type' => 'post',
         'posts_per_page' => 4,
         'order' => 'DESC', // classé par ordre alphabétique 
         'orderby' => 'date_post', // par titre 
-    ));
-    ?>
-    
-<div class="container">
-<div class="content_title">
-            <h2 class="title_concept">DERNIERS ARTICLES</h2>
-            <div class="content_trait">
-                <div class="trait_petit"></div>
-                <div class="trait_grand"></div>
-            </div>
-        </div>
-    <div class="row">
+        );
 
-        <div class="col-12 col-md-6 col-lg-3">
-            <?php if ($query->have_posts()) : $query->the_post(); ?>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_excerpt(); ?></p>
-            <?php endif; ?>
-        </div>
+        $post_query = new WP_Query($post);
+        if ($post_query->have_posts()) :
+            while ($post_query->have_posts()) : $post_query->the_post();
+            
+            ?>
 
-        <div class="col-12 col-md-6 col-lg-3">
-            <?php if ($query->have_posts()) : $query->the_post(); ?>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_excerpt(); ?></p>
-            <?php endif; ?>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-            <?php if ($query->have_posts()) : $query->the_post(); ?>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_excerpt(); ?></p>
-            <?php endif; ?>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-            <?php if ($query->have_posts()) : $query->the_post(); ?>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_excerpt(); ?></p>
-            <?php endif; ?>
+        <article class="col-12 col-md-6">
+      <div class="content_title">
+  <h3 class="title"><?php the_title();?></h3>
+        <div class="content_trait">
+            <div class="trait_petit"></div>
+            <div class="trait_grand"></div>
         </div>
     </div>
+  <div class="thumb">
+            <?php the_post_thumbnail(array(350,250)); ?>
+            </div>
+            <div class="extrait">
+<a href="">Voir l'article</a>             
 </div>
+             <p class="datePost"><?php the_modified_date(); ?></p>
+           
+       
+        </article>
+
+        <?php
+            endwhile;
+            endif;
+            die(); 
+        ?>
+    </div>
 
 
 

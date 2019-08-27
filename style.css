@@ -43,4 +43,61 @@ h2 {
 #last_article {
   height: 100vh;
 }
+
+#last_article article {
+  padding-bottom: 80px;
+}
+
+#last_article article .content_title {
+  position: absolute;
+  z-index: 5;
+  left: 120px;
+  top: 10px;
+  color: white;
+  padding: 0;
+}
+
+#last_article article .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#last_article article .content_title .content_trait .trait_petit {
+  border-top: 2px #C3D8BB solid;
+  width: 30px;
+}
+
+#last_article article .content_title .content_trait .trait_grand {
+  border-top: 2px #C3D8BB solid;
+  width: 60px;
+}
+
+#last_article article .thumb {
+  position: relative;
+  text-align: center;
+}
+
+#last_article article .thumb img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+#last_article article .extrait {
+  cursor: pointer;
+  position: absolute;
+  bottom: 160px;
+  left: 200px;
+  color: white;
+}
+
+#last_article article .datePost {
+  position: absolute;
+  bottom: 80px;
+  left: 130px;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

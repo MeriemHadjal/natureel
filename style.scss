@@ -48,4 +48,51 @@ h2{
 
 #last_article{
     height: 100vh;
+    article{
+        
+        padding-bottom: 80px;
+        .content_title{
+            position: absolute;
+            z-index: 5;
+            left: 120px;
+            top: 10px;
+            color: white;
+            padding:0;
+    
+            .content_trait{
+                width: 150px;
+                display: flex;
+                justify-content: space-around;
+                .trait_petit{
+                    border-top: 2px $background-vert solid;
+                    width: 30px;
+                }
+                .trait_grand{
+                    border-top: 2px $background-vert solid;
+                    width: 60px;
+                }
+            }
+        }
+
+        .thumb{
+            position: relative;
+            text-align: center;
+        img{
+            filter: brightness(0.5);
+        }
+    }
+    .extrait{
+        cursor: pointer;
+        position: absolute;
+        bottom: 160px;
+        left: 200px;
+        color: white;
+    }
+    .datePost{
+        position: absolute;
+        bottom: 80px;
+        left: 130px;
+        color: white;
+    }
+    }
 }
