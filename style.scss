@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// VARIABLES
+
+$background-vert: #c3d8bb;
+$background-noir: #222421;
+$text-color: #222421;
+$text-size: 14px;
+$text-titre-principal: 150px;
+$text-titre : 20px;
+$text-menu: 24px;
+$segoe: 'Segoe UI',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
+
+// HEADER BEGINNING
+
+header {
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -100;
+    }
+
+    .filter {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -99;
+        background-color: rgba($color: #000000, $alpha: 0.1)
+    }
+
+    .pos-f-t {
+        .menu {
+            width: 90vw;
+            height: 150px;
+            // background: rgba(0, 0, 0, 0.4);
+            align-items: center !important;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+
+                li {
+                    z-index: 99;
+                    margin: 0 15px;
+                    list-style: none;
+                    font-size: $text-menu;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    @media screen and (max-width: 1000px) {
+                        margin: 20px 0;
+                    }
+                }
+
+                @media screen and (max-width: 1000px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        .navbar {
+            .burger {
+                .fa-bars {
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+
+
+    .header_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        text-align: center;
+
+        .title {
+            h2 {
+                color: white;
+                font-size: $text-titre-principal;
+                font-family: $segoe;
+                font-weight: bold;
+
+                @media screen and (max-width : 990px) {
+                    font-size: 90px;
+                }
+            }
+        }
+
+        .btn_arrow {
+            .fa-angle-double-down {
+                color: white;
+                font-size: 70px;
+                border: 4px solid green;
+                border-radius: 50% 0 50% 0;
+                padding: 10px;
+                margin-bottom: 15px;
+                cursor: pointer;
+
+                @media screen and (max-width : 990px){
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
