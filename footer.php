@@ -1,5 +1,11 @@
-</div><!-- /.container -->
+<div class="test1">
+<img src="wp-content/themes/natureel/assets/img/background-dechire-footer.png" >
+</div>
+
 <footer class="container-fluid">
+<!-- <div class="test2">
+<img src="wp-content/themes/natureel/assets/img/background-dechire-footer.png" >
+</div> -->
     <div class="container">
         <div class="row d-flex justify-content-between align-items-center">
             <p class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">NatuReel tous droits réservées</p>

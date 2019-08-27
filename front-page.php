@@ -2,10 +2,10 @@
 get_header();
 ?>
 
-<h1>front page</h1>
-
-
-<section id="sports" class="container-fluid d-flex flex-row align-items-center">
+<div class="test">
+  
+</div>
+<section id="sports" class="container-fluid">
     <div class="container">
         <h2>NOS SPORTS</h2>
         <div class="content_trait">
