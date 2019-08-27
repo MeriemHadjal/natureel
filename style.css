@@ -85,4 +85,45 @@ header .navbar button span .is-active {
   -webkit-transition: 1s all ease-in-out;
   transition: 1s all ease-in-out;
 }
+
+header .header_content {
+  min-height: 100vh;
+}
+
+header .header_content .title h1 {
+  text-align: center;
+  font-size: 150px;
+  color: white;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 990px) {
+  header .header_content .title h1 {
+    font-size: 90px;
+  }
+}
+
+header .header_content .btn_arrow {
+  text-align: center;
+}
+
+header .header_content .btn_arrow .fa-angle-double-down {
+  cursor: pointer;
+  border: 4px solid green;
+  border-radius: 50% 0 50% 0;
+  font-size: 70px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 990px) {
+  header .header_content .btn_arrow .fa-angle-double-down {
+    font-size: 35px;
+  }
+}
+
+header .filter {
+  background: rgba(0, 0, 0, 0.1);
+}
 /*# sourceMappingURL=style.css.map */
