@@ -18,9 +18,9 @@ section {
 }
 
 #sports {
-  background-image: url(assets/img/cadre_vert_dechire.png);
-  background-size: contain;
-  background-position: center;
+  background-image: url(assets/img/background-sport-dechire-before.png);
+  background-size: 100% auto;
+  background-position: top;
   background-repeat: no-repeat;
   position: relative;
   margin-top: 100px;
@@ -152,14 +152,11 @@ section {
   }
 }
 
-#footer_background_before {
-  overflow: hidden;
-  margin-bottom: -5px;
-}
-
 footer {
-  position: relative;
-  background: #222421;
+  background-image: url(assets/img/background-footer-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
   color: white;
   font-size: 17px;
   width: 100%;
