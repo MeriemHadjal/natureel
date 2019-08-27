@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>NatuReel</title>
+<title>Vinyles</title>
 
 <!-- Ajout d'une nouvelle feuille de style qui sera spécifique à notre thème -->
 <link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">

@@ -20,8 +20,8 @@ sans-serif;
 
 section {
     height: 100vh;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 // Règles spécifiques 
@@ -41,7 +41,7 @@ section {
         width: 300px;
         display: flex;
         justify-content: space-around;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
 
         .trait_petit {
             border-top: 2px white solid;
@@ -56,14 +56,6 @@ section {
 
     #images_sports {
       margin-top: 6%;
-
-      img {
-        height: 192px;
-      }
-
-      img:hover {
-          opacity: 0.6;
-      }
     }
 }
 
@@ -71,15 +63,13 @@ footer {
     background: $background-noir;
     color: $text-color-white;
     font-size: 17px;
+    height: 50px;
     width: 100%;
-    margin-top: 200px; // a supprimer lors de la fusion
 
     .container {
-    
-        .row {
-            height: 100px;
-            width: 100%;
 
+        .row {
+            
             ul {
                 li {
                     list-style: none;
@@ -89,7 +79,7 @@ footer {
         
                         i {
                             font-size: 25px;
-                            margin-right: 20px;
+                            margin-right: 10px;
                         }
                     }
         
