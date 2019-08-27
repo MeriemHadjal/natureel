@@ -21,6 +21,7 @@ get_header();
             </a>
             <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                 <img src="wp-content/themes/natureel/assets/img/chasse.png">
+
             </a>
             <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
                 <img src="wp-content/themes/natureel/assets/img/randonnee.png">
