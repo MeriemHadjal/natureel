@@ -2,9 +2,10 @@
 get_header();
 ?>
 
-<div class="test">
-  
-</div>
+<!-- <div id="sports_background_before">
+    <img src="wp-content/themes/natureel/assets/img/background-dechire-before.png" alt="">
+</div> -->
+
 <section id="sports" class="container-fluid">
     <div class="container">
         <h2>NOS SPORTS</h2>
@@ -13,22 +14,26 @@ get_header();
             <div class="trait_grand"></div>
         </div>
         <div id="images_sports" class="row">
-            <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+            <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
                 <img src="wp-content/themes/natureel/assets/img/peche.png">
             </a>
-            <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+            <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
                 <img src="wp-content/themes/natureel/assets/img/equitation.png">
             </a>
-            <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+            <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
                 <img src="wp-content/themes/natureel/assets/img/chasse.png">
 
             </a>
-            <a href="#" class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+            <a href="#" class="offset-4 col-4 offset-sm-1 col-sm-5 col-lg-2">
                 <img src="wp-content/themes/natureel/assets/img/randonnee.png">
             </a>
         </div>
     </div>
 </section>
+
+<!-- <div id="sports_background_after">
+    <img src="wp-content/themes/natureel/assets/img/background-dechire-after.png" alt="">
+</div> -->
 
 <?php
 get_footer();

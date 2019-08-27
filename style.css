@@ -7,25 +7,24 @@ section {
   height: 100vh;
 }
 
-#sports::before {
-  content: url(assets/img/background-dechire-before.png);
-  position: absolute;
-  top: -19px;
-  margin-left: -1.2%;
+#sports_background_before {
+  overflow: hidden;
+  margin-bottom: -103px;
 }
 
-#sports::after {
-  content: url(assets/img/background-dechire-after.png);
-  position: absolute;
-  bottom: -18px;
-  margin-left: -1.2%;
+#sports_background_after {
+  overflow: hidden;
+  margin-bottom: -105px;
 }
 
 #sports {
-  background-color: #C3D8BB;
-  z-index: 100;
+  background-image: url(assets/img/cadre_vert_dechire.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #sports h2 {
@@ -35,6 +34,18 @@ section {
   font-size: 80px;
   text-align: left;
   padding-top: 40px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports h2 {
+    font-size: 40px;
+  }
 }
 
 #sports .content_trait {
@@ -52,9 +63,45 @@ section {
   width: 70px;
 }
 
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports .content_trait .trait_petit {
+    width: 52px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports .content_trait .trait_petit {
+    width: 35px;
+  }
+}
+
 #sports .content_trait .trait_grand {
   border-top: 2px white solid;
   width: 120px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports .content_trait .trait_grand {
+    width: 90px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports .content_trait .trait_grand {
+    width: 60px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports .content_trait {
+    width: 225px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports .content_trait {
+    width: 150px;
+  }
 }
 
 #sports #images_sports {
@@ -62,19 +109,52 @@ section {
   padding-bottom: 40px;
 }
 
-#sports #images_sports img {
+#sports #images_sports a img {
   height: 192px;
 }
 
-#sports #images_sports img:hover {
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports #images_sports a img {
+    height: 171px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports #images_sports a img {
+    height: 150px;
+  }
+}
+
+#sports #images_sports a img:hover {
   opacity: 0.6;
 }
 
-.test1 {
+@media (min-width: 578px) and (max-width: 991px) {
+  #sports #images_sports a {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports #images_sports {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports #images_sports {
+    padding-bottom: 0;
+  }
+  #sports #images_sports a:nth-child(2),
+  #sports #images_sports a:nth-child(3),
+  #sports #images_sports a:last-child {
+    margin-top: 60px;
+  }
+}
+
+#footer_background_before {
   overflow: hidden;
-  position: absolute;
-  top: -20px;
-  margin-top: 200px;
+  margin-bottom: -5px;
 }
 
 footer {
@@ -115,5 +195,11 @@ footer .container .row a {
 footer .container .row a:hover {
   text-decoration: none;
   color: grey;
+}
+
+@media (max-width: 577px) {
+  footer .container .row {
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

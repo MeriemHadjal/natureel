@@ -1,3 +1,16 @@
+// Media quéries 
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
 // variables 
 $background-vert: #C3D8BB;
 $background-noir: #222421;
@@ -10,10 +23,12 @@ $text-content: 14px;
 $text-menu: 24px;
 
 $text-titre-principal: 36px;
-$text-titre : 20px; 
+$text-titre : 20px;
 
-$segoe: 'Segoe UI', sans-serif;
-$roboto: 'Roboto', sans-serif;
+$segoe: 'Segoe UI',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
 
 
 
@@ -30,27 +45,39 @@ section {
 
 // Règles spécifiques 
 
-#sports::before {
-    content: url(assets/img/background-dechire-before.png);
-    position: absolute;
-    top: -19px;
-    margin-left: -1.2%;
+// #sports::before {
+//     content: url(assets/img/background-dechire-before.png);
+//     position: absolute;
+//     top: -19px;
+//     margin-left: -1.2%;
+// }
+
+// #sports::after {
+//     content: url(assets/img/background-dechire-after.png);
+//     position: absolute;
+//     bottom: -18px;
+//     margin-left: -1.2%;
+// }
+
+#sports_background_before {
+    overflow: hidden;
+    margin-bottom: -103px;
 }
 
-#sports::after {
-    content: url(assets/img/background-dechire-after.png);
-    position: absolute;
-    bottom: -18px;
-    margin-left: -1.2%;
-    
+#sports_background_after {
+    overflow: hidden;
+    margin-bottom: -105px;
 }
 
 #sports {
-    background-color: $background-vert;
-    z-index: 100;
+    background-image: url(assets/img/cadre_vert_dechire.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     margin-top: 100px;
-    
+    margin-bottom: 100px;
+
     h2 {
         font-family: $segoe;
         font-weight: medium;
@@ -58,6 +85,14 @@ section {
         font-size: 80px;
         text-align: left;
         padding-top: 40px;
+
+        @media (min-width: 578px) and (max-width: 769px) {
+            font-size: 60px;
+        }
+
+        @media (max-width: 577px) {
+            font-size: 40px;
+        }
     }
 
     .content_trait {
@@ -69,26 +104,80 @@ section {
         .trait_petit {
             border-top: 2px white solid;
             width: 70px;
+
+            @media (min-width: 578px) and (max-width: 769px) {
+                width: 52px;
+            }
+
+            @media (max-width: 577px) {
+                width: 35px;
+            }
         }
 
         .trait_grand {
             border-top: 2px white solid;
             width: 120px;
+
+            @media (min-width: 578px) and (max-width: 769px) {
+                width: 90px;
+            }
+
+            @media (max-width: 577px) {
+                width: 60px;
+            }
+        }
+
+        @media (min-width: 578px) and (max-width: 769px) {
+            width: 225px;
+        }
+
+        @media (max-width: 577px) {
+            width: 150px;
         }
     }
 
     #images_sports {
-      margin-top: 6%;
-      padding-bottom: 40px;
+        margin-top: 6%;
+        padding-bottom: 40px;
 
-      img {
-        height: 192px;
-      }
+        a {
+            img {
+                height: 192px;
 
-      img:hover {
-          opacity: 0.6;
-      }
+                @media (min-width: 578px) and (max-width: 769px) {
+                    height: 171px;
+                }
+
+                @media (max-width: 577px) {
+                    height: 150px;
+                }
+            }
+
+            img:hover {
+                opacity: 0.6;
+            }
+
+            @media (min-width: 578px) and (max-width: 991px) {
+                    margin-top: 100px;
+            }
+        }
+
+        @media (min-width: 578px) and (max-width: 769px) {
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 577px) {
+            padding-bottom: 0;
+
+            a:nth-child(2),
+            a:nth-child(3),
+            a:last-child {
+                margin-top: 60px;
+            }
+        }
     }
+
+
 }
 
 // footer::before {
@@ -96,15 +185,14 @@ section {
 //     position: absolute;
 //     top: -20px;
 //     width: 100%;
-//     margin-left: -1.2%;    
+//     margin-left: -1.2%;
 // }
 
-   .test1 {
-        overflow: hidden;
-        position: absolute;
-        top: -20px;
-        margin-top: 200px;
-    }
+#footer_background_before {
+    overflow: hidden;
+    margin-bottom: -5px;
+}
+
 
 footer {
     position: relative;
@@ -113,14 +201,8 @@ footer {
     font-size: 17px;
     width: 100%;
 
-    // .test2 {
-    //     overflow: hidden;
-    //     position: absolute;
-    //     top: -20px;
-    // }
-
     .container {
-    
+
         .row {
             height: 100px;
             width: 100%;
@@ -128,33 +210,35 @@ footer {
             ul {
                 li {
                     list-style: none;
-        
+
                     a {
                         color: white;
-        
+
                         i {
                             font-size: 25px;
                             margin-right: 20px;
                         }
                     }
-        
+
                     a:hover {
                         text-decoration: none;
                         color: grey;
                     }
                 }
             }
-        
+
             a {
                 color: white;
             }
-        
+
             a:hover {
                 text-decoration: none;
                 color: grey;
-            }   
+            }
 
+            @media (max-width: 577px) {
+                height: 150px;
+            }
         }
-        
     }
 }
