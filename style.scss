@@ -35,7 +35,7 @@ header {
       justify-content: flex-end;
 
       li {
-        z-index: 99;
+        // z-index: 99;
         margin: 0 15px;
         list-style: none;
         font-size: $text-menu;
@@ -55,6 +55,21 @@ header {
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-end;
+      }
+    }
+  }
+  .navbar {
+    button {
+      span {
+        .fa-bars {
+          color: white;
+          transition: 1s all ease-in-out;
+        }
+        .is-active{
+
+          transform: rotate(90deg);
+          transition: 1s all ease-in-out;
+        }
       }
     }
   }

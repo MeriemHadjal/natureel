@@ -30,7 +30,6 @@ header .menu ul {
 }
 
 header .menu ul li {
-  z-index: 99;
   margin: 0 15px;
   list-style: none;
   font-size: 24px;
@@ -62,5 +61,18 @@ header .menu ul li a {
         -ms-flex-align: end;
             align-items: flex-end;
   }
+}
+
+header .navbar button span .fa-bars {
+  color: white;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+header .navbar button span .is-active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

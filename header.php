@@ -35,8 +35,8 @@
                 </div>
             </div>
             <nav class="navbar">
-                <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fas fa-bars"></i></span>
+                <button class="navbar-toggler burger" id="burger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i id="test" class="fas fa-bars"></i></span>
                 </button>
             </nav>
         </div>
