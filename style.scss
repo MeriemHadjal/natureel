@@ -48,15 +48,67 @@ section {
     height: 100vh;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 80px;
+    font-family: $segoe;
+    color: #665D51;
+
+    @media (min-width: 578px) and (max-width: 769px) {
+        font-size: 60px;
+    }
+
+    @media (max-width: 577px) {
+        font-size: 40px;
+    }
+}
+
+.content_title {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .content_trait {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+
+        .trait_petit {
+            border-top: 2px  #665D51 solid;
+            width: 70px;
+        }
+
+        .trait_grand {
+            border-top: 2px #665D51 solid;
+            width: 120px;
+        }
+    }
+}
+
 // Règles spécifiques 
+
+#concept {
+    height: 100vh;
+
+    .content_text {
+        p {
+            padding-top: 40px;
+        }
+    }
+}
 
 #sports {
     background-image: url(assets/img/background-sport-dechire-before.png);
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;
-    margin-top: 100px; // a effacer lors de la fusion 
-    margin-bottom: 100px; // a effacer lors de la fusion 
     height: 100%;
 
 
@@ -171,7 +223,8 @@ section {
         @media (max-width: 577px) {
             padding-bottom: 0;
 
-            a:nth-child(2),// espace entre les images pour le support portable
+            a:nth-child(2),
+            // espace entre les images pour le support portable
             a:nth-child(3),
             a:last-child {
                 margin-top: 60px;
@@ -183,6 +236,71 @@ section {
         height: auto;
         background-color: $background-vert;
         background-image: none;
+    }
+}
+
+
+#last_article {
+    height: 100vh;
+    margin-bottom: 80px;
+    background-image: url(assets/img/background-derniers-articles-dechire.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .container {
+        height: 70%;
+
+        .row {
+            height: 100%;
+
+            article {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                padding-top: 20px;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .content_title {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 40px;
+
+                        .content_trait {
+                            width: 150px;
+                            display: flex;
+                            justify-content: space-around;
+
+                            .trait_petit {
+                                border-top: 2px $background-vert solid;
+                                width: 30px;
+                            }
+
+                            .trait_grand {
+                                border-top: 2px $background-vert solid;
+                                width: 60px;
+                            }
+                        }
+                    }
+
+                    .extrait {
+                        padding-left: 200px;
+                    }
+
+                    .datePost {
+                        margin-bottom: 15px;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
     }
 }
 

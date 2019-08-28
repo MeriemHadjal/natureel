@@ -11,13 +11,70 @@ section {
   height: 100vh;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: "Segoe UI", sans-serif;
+  color: #665D51;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 577px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.content_title {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.content_title .content_trait {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_title .content_trait .trait_petit {
+  border-top: 2px  #665D51 solid;
+  width: 70px;
+}
+
+.content_title .content_trait .trait_grand {
+  border-top: 2px #665D51 solid;
+  width: 120px;
+}
+
+#concept {
+  height: 100vh;
+}
+
+#concept .content_text p {
+  padding-top: 40px;
+}
+
 #sports {
   background-image: url(assets/img/background-sport-dechire-before.png);
   background-size: 100% auto;
   background-position: top;
   background-repeat: no-repeat;
-  margin-top: 100px;
-  margin-bottom: 100px;
   height: 100%;
 }
 
@@ -168,6 +225,80 @@ section {
     background-color: #C3D8BB;
     background-image: none;
   }
+}
+
+#last_article {
+  height: 100vh;
+  margin-bottom: 80px;
+  background-image: url(assets/img/background-derniers-articles-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#last_article .container {
+  height: 70%;
+}
+
+#last_article .container .row {
+  height: 100%;
+}
+
+#last_article .container .row article {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#last_article .container .row article a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#last_article .container .row article a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#last_article .container .row article a .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#last_article .container .row article a .content_title .content_trait .trait_petit {
+  border-top: 2px #C3D8BB solid;
+  width: 30px;
+}
+
+#last_article .container .row article a .content_title .content_trait .trait_grand {
+  border-top: 2px #C3D8BB solid;
+  width: 60px;
+}
+
+#last_article .container .row article a .extrait {
+  padding-left: 200px;
+}
+
+#last_article .container .row article a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
 }
 
 footer {
