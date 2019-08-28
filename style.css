@@ -5,10 +5,12 @@
 
 header {
   min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
 }
 
 header #myVideo {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -16,99 +18,63 @@ header #myVideo {
   z-index: -100;
 }
 
-header .menu {
-  position: absolute;
-  top: 0;
+header .container_menu {
+  position: fixed;
+  top: -1000px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
+  min-height: 100vh;
+  min-width: 100vw;
   background: rgba(0, 0, 0, 0.4);
 }
 
-header .menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: 20%;
-  padding-left: 15px;
-}
-
-header .menu ul li {
-  margin: 15px 0;
+header .container_menu .menu ul {
   list-style: none;
-  font-size: 36px;
 }
 
-header .menu ul li a {
+header .container_menu .menu ul li {
+  margin: 15px 0;
+  font-size: 36px;
   color: white;
+}
+
+header .container_menu .menu ul li a {
+  color: white;
+  font-family: "Segoe UI", sans-serif;
   text-decoration: none;
 }
 
-@media screen and (max-width: 1100px) {
-  header .menu ul li {
-    margin: 20px 0;
-  }
-}
-
-header .menu ul li:after {
+header .container_menu .menu ul li a:after {
   content: "|";
   margin-left: 15px;
   color: white;
 }
 
-@media screen and (max-width: 1100px) {
-  header .menu ul li:after {
-    content: "";
-  }
+header .container_menu .fondateur_contact,
+header .container_menu .siege_contact {
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (max-width: 1100px) {
-  header .menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-}
-
-header .navbar button span .fa-bars {
+header .container_menu .fondateur_contact li,
+header .container_menu .siege_contact li {
+  margin: 15px 0;
+  font-size: 36px;
   color: white;
-  -webkit-transition: 1s all ease-in-out;
-  transition: 1s all ease-in-out;
-}
-
-header .navbar button span .is-active {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transition: 1s all ease-in-out;
-  transition: 1s all ease-in-out;
 }
 
 header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 0 15px;
+  padding: 0 110px;
   width: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 header .title h1 {
@@ -124,10 +90,19 @@ header .title h1 {
   }
 }
 
-header .title .fa-bars {
+header .title .burger {
+  z-index: 9999;
+}
+
+header .title .fa-bars, header .title .fa-times {
   font-size: 32px;
   cursor: pointer;
   color: white;
+  z-index: 9999;
+}
+
+header .title .fa-times {
+  display: none;
 }
 
 header .title span {

@@ -13,13 +13,18 @@ $text-titre: 20px;
 $text-titre-principal: 100px;
 $text-menu: 36px;
 $white: white;
+$segoe: "Segoe UI", sans-serif;
+$roboto: "Roboto", sans-serif;
 
 // HEADER BEGINNING
 
 header {
   min-height: 100vh;
+  font-family: $segoe;
+  overflow: hidden;
+  
   #myVideo {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -27,79 +32,58 @@ header {
     z-index: -100;
   }
 
-  .menu {
-    position: absolute;
-    top: 0;
+  .container_menu {
+    position: fixed;
+    top: -1000px;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    // display: none;
+    min-height: 100vh;
+    min-width: 100vw;
     background: rgba(0, 0, 0, 0.4);
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-top: 20%;
-      padding-left: 15px;
+    .menu {
+      ul {
+        list-style: none;
+
+        li {
+          margin: 15px 0;
+          font-size: $text-menu;
+          color: white;
+          a {
+            color: white;
+            font-family: $segoe;
+            text-decoration: none;
+          }
+          a:after {
+            content: "|";
+            margin-left: 15px;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .fondateur_contact,
+    .siege_contact {
+      list-style: none;
+      align-items: center;
 
       li {
-        // z-index: 99;
         margin: 15px 0;
-        list-style: none;
         font-size: $text-menu;
-
-        a {
-          color: $white;
-          text-decoration: none;
-        }
-
-        @media screen and (max-width: 1100px) {
-          margin: 20px 0;
-        }
-      }
-
-      li:after {
-        content: "|";
-        margin-left: 15px;
-        color: $white;
-
-        @media screen and (max-width: 1100px) {
-          content: "";
-        }
-      }
-     
-
-      @media screen and (max-width: 1100px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
+        color: white;
       }
     }
   }
-  .navbar {
-    button {
-      span {
-        .fa-bars {
-          color: $white;
-          transition: 1s all ease-in-out;
-        }
-        .is-active {
-          transform: rotate(90deg);
-          transition: 1s all ease-in-out;
-        }
-      }
-    }
-  }
+  
   .title {
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    padding: 0 15px;
+    padding: 0 110px;
     width: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.4);
     h1 {
       font-size: $text-titre-principal;
       color: $white;
@@ -111,11 +95,23 @@ header {
       }
     }
 
-    .fa-bars {
+    .burger{
+
+      z-index: 9999;
+    }
+
+    .fa-bars, .fa-times {
       font-size: 32px;
       cursor: pointer;
       color: white;
+      z-index: 9999;
     }
+
+    .fa-times{
+
+      display: none;
+    }
+
     span {
       font-size: 32px;
       color: white;
