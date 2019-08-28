@@ -2,7 +2,8 @@
 get_header();
 ?>
 
-<section id="concept" class="container-fluid"> <!-- début section concept -->
+<section id="concept" class="container-fluid">
+    <!-- début section concept -->
     <div class="container">
         <div class="content_title">
             <h2 class="title_concept">CONCEPT</h2>
@@ -36,12 +37,15 @@ get_header();
     </div>
 </section> <!-- fin section concept -->
 
-<section id="sports" class="container-fluid"> <!-- début section sport -->
+<section id="sports" class="container-fluid">
+    <!-- début section sport -->
     <div class="container">
         <h2>NOS SPORTS</h2>
-        <div class="content_trait">
-            <div class="trait_petit"></div>
-            <div class="trait_grand"></div>
+        <div class="content_title">
+            <div class="content_trait">
+                <div class="trait_petit"></div>
+                <div class="trait_grand"></div>
+            </div>
         </div>
         <div id="images_sports" class="row justify-content-center align-items-center">
             <div class="offset-1 col-6 col-sm-5 offset-lg-0 col-lg-2">
@@ -76,7 +80,8 @@ get_header();
 
 
 
-<section id="last_article" class="container-fluid pr-0 pl-0 allSlider"> <!-- début section derniers articles -->
+<section id="last_article" class="container-fluid pr-0 pl-0 allSlider">
+    <!-- début section derniers articles -->
 
     <div class="container">
         <div class="content_title">
@@ -128,8 +133,8 @@ get_header();
             ?>
         </div>
 
-        </section> <!-- fin section derniers articles -->
+</section> <!-- fin section derniers articles -->
 
-        <?php
-        get_footer();
-        ?>
+<?php
+get_footer();
+?>

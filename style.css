@@ -7,8 +7,8 @@ html {
   line-height: 0 !important;
 }
 
-section {
-  height: 100vh;
+ul li {
+  list-style: none;
 }
 
 a {
@@ -23,7 +23,10 @@ a:hover {
 h2 {
   font-size: 80px;
   font-family: "Segoe UI", sans-serif;
+  font-weight: medium;
   color: #665D51;
+  text-align: left;
+  padding-top: 80px;
 }
 
 @media (min-width: 578px) and (max-width: 769px) {
@@ -39,8 +42,7 @@ h2 {
 }
 
 .content_title {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 .content_title .content_trait {
@@ -57,9 +59,45 @@ h2 {
   width: 70px;
 }
 
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait .trait_petit {
+    width: 52px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait .trait_petit {
+    width: 35px;
+  }
+}
+
 .content_title .content_trait .trait_grand {
   border-top: 2px #665D51 solid;
   width: 120px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait .trait_grand {
+    width: 90px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait .trait_grand {
+    width: 60px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait {
+    width: 225px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait {
+    width: 150px;
+  }
 }
 
 #concept {
@@ -68,6 +106,12 @@ h2 {
 
 #concept .content_text p {
   padding-top: 40px;
+}
+
+@media (max-width: 577px) {
+  #concept {
+    height: auto;
+  }
 }
 
 #sports {
@@ -83,83 +127,6 @@ h2 {
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   color: #665D51;
-}
-
-#sports h2 {
-  font-family: "Segoe UI", sans-serif;
-  font-weight: medium;
-  color: #665D51;
-  font-size: 80px;
-  text-align: left;
-  padding-top: 40px;
-}
-
-@media (min-width: 578px) and (max-width: 769px) {
-  #sports h2 {
-    font-size: 60px;
-  }
-}
-
-@media (max-width: 577px) {
-  #sports h2 {
-    font-size: 40px;
-  }
-}
-
-#sports .content_trait {
-  width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-bottom: 60px;
-}
-
-#sports .content_trait .trait_petit {
-  border-top: 2px #665D51 solid;
-  width: 70px;
-}
-
-@media (min-width: 578px) and (max-width: 769px) {
-  #sports .content_trait .trait_petit {
-    width: 52px;
-  }
-}
-
-@media (max-width: 577px) {
-  #sports .content_trait .trait_petit {
-    width: 35px;
-  }
-}
-
-#sports .content_trait .trait_grand {
-  border-top: 2px #665D51 solid;
-  width: 120px;
-}
-
-@media (min-width: 578px) and (max-width: 769px) {
-  #sports .content_trait .trait_grand {
-    width: 90px;
-  }
-}
-
-@media (max-width: 577px) {
-  #sports .content_trait .trait_grand {
-    width: 60px;
-  }
-}
-
-@media (min-width: 578px) and (max-width: 769px) {
-  #sports .content_trait {
-    width: 225px;
-  }
-}
-
-@media (max-width: 577px) {
-  #sports .content_trait {
-    width: 150px;
-  }
 }
 
 #sports #images_sports {
@@ -301,6 +268,12 @@ h2 {
   padding-left: 30px;
 }
 
+@media (max-width: 577px) {
+  #last_article {
+    height: auto;
+  }
+}
+
 footer {
   background-image: url(assets/img/background-footer-dechire.png);
   background-size: 100% auto;
@@ -314,14 +287,6 @@ footer {
 
 footer .container .row {
   width: 100%;
-}
-
-footer .container .row ul li {
-  list-style: none;
-}
-
-footer .container .row ul li a {
-  color: white;
 }
 
 footer .container .row ul li a i {

@@ -44,8 +44,11 @@ html {
     line-height: 0 !important;
 }
 
-section {
-    height: 100vh;
+ul {
+
+    li {
+        list-style: none;
+    }
 }
 
 a {
@@ -60,7 +63,10 @@ a:hover {
 h2 {
     font-size: 80px;
     font-family: $segoe;
+    font-weight: medium;
     color: #665D51;
+    text-align: left;
+    padding-top: 80px;
 
     @media (min-width: 578px) and (max-width: 769px) {
         font-size: 60px;
@@ -71,9 +77,8 @@ h2 {
     }
 }
 
-.content_title {
-    padding-top: 80px;
-    padding-bottom: 80px;
+.content_title { // traits en dessous du h2
+    padding-bottom: 60px;
 
     .content_trait {
         width: 300px;
@@ -82,68 +87,6 @@ h2 {
 
         .trait_petit {
             border-top: 2px  #665D51 solid;
-            width: 70px;
-        }
-
-        .trait_grand {
-            border-top: 2px #665D51 solid;
-            width: 120px;
-        }
-    }
-}
-
-// Règles spécifiques 
-
-#concept {
-    height: 100vh;
-
-    .content_text {
-        p {
-            padding-top: 40px;
-        }
-    }
-}
-
-#sports {
-    background-image: url(assets/img/background-sport-dechire-before.png);
-    background-size: 100% auto;
-    background-position: top;
-    background-repeat: no-repeat;
-    height: 100%;
-
-
-    .sports {
-        margin-top: 50px;
-        font-size: 30px;
-        font-family: $roboto;
-        color: #665D51;
-    }
-
-    h2 {
-        font-family: $segoe;
-        font-weight: medium;
-        color: #665D51;
-        font-size: 80px;
-        text-align: left;
-        padding-top: 40px;
-
-        @media (min-width: 578px) and (max-width: 769px) {
-            font-size: 60px;
-        }
-
-        @media (max-width: 577px) {
-            font-size: 40px;
-        }
-    }
-
-    .content_trait {
-        width: 300px;
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 60px;
-
-        .trait_petit {
-            border-top: 2px #665D51 solid;
             width: 70px;
 
             @media (min-width: 578px) and (max-width: 769px) {
@@ -175,6 +118,38 @@ h2 {
         @media (max-width: 577px) {
             width: 150px;
         }
+    }
+}
+
+// Règles spécifiques 
+
+#concept {
+    height: 100vh;
+
+    .content_text {
+        p {
+            padding-top: 40px;
+        }
+    }
+    
+    @media (max-width: 577px) {
+        height: auto;
+    }
+}
+
+#sports {
+    background-image: url(assets/img/background-sport-dechire-before.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100%;
+
+
+    .sports {
+        margin-top: 50px;
+        font-size: 30px;
+        font-family: $roboto;
+        color: #665D51;
     }
 
     #images_sports {
@@ -239,7 +214,6 @@ h2 {
     }
 }
 
-
 #last_article {
     height: 100vh;
     margin-bottom: 80px;
@@ -302,6 +276,10 @@ h2 {
             }
         }
     }
+
+    @media (max-width: 577px) {
+        height: auto;
+    }
 }
 
 footer {
@@ -320,11 +298,8 @@ footer {
 
             ul {
                 li {
-                    list-style: none;
 
                     a {
-                        color: white;
-
                         i {
                             font-size: 25px;
                             margin-right: 20px;
