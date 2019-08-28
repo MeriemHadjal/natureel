@@ -37,19 +37,26 @@
         <div class="d-flex justify-content-around align-items-center  container_menu">
 
             <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+            <div class="coordonnees d-flex flex-column justify-content-between">
+                <ul class="fondateur_contact">
+                    <li class="titre_fondateur">Fondateur</li>
+                    <li>6 Rue blabla 25000 Besançon</li>
+                    <li>06 00 00 00 00</li>
+                    <li>natureel@pro.com</li>
+                </ul>
 
-            <ul class="fondateur_contact">
-                <li>Fondateur</li>
-                <li>Adresse</li>
-                <li>Téléphone</li>
-                <li>Mail</li>
-            </ul>
-
+                <ul class="fondateur_contact">
+                    <li class="titre_fondateur">Fondateur</li>
+                    <li>6 Rue blabla 25000 Besançon</li>
+                    <li>06 00 00 00 00</li>
+                    <li>natureel@pro.com</li>
+                </ul>
+            </div>
             <ol class="siege_contact">
-                <li>Association NatuReel</li>
-                <li>Adresse</li>
-                <li>Téléphone</li>
-                <li>Mail</li>
+                <li class="titre_fondateur">Association NatuReel</li>
+                <li>6 Rue blabla 25000 Besançon</li>
+                <li>06 00 00 00 00 </li>
+                <li>natureel@pro.com</li>
             </ol>
         </div>
 

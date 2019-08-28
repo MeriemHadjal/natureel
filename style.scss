@@ -22,7 +22,7 @@ header {
   min-height: 100vh;
   font-family: $segoe;
   overflow: hidden;
-  
+
   #myVideo {
     position: absolute;
     right: 0;
@@ -39,44 +39,98 @@ header {
     min-height: 100vh;
     min-width: 100vw;
     background: rgba(0, 0, 0, 0.4);
+    padding: 0 30px;
 
     .menu {
       padding-top: 39px;
+      width: 33.33%;
 
       ul {
         list-style: none;
+        margin-bottom: 0rem !important;
 
         li {
           margin: 15px 0;
-          font-size: $text-menu;
+          // font-size: $text-menu;
+          font-size: 60px;
           color: white;
           a {
             color: white;
             font-family: $segoe;
             text-decoration: none;
+            @media (max-width: 990px) {
+              font-size: 30px;
+            }
           }
           a:after {
             content: "|";
             margin-left: 15px;
             color: $white;
           }
+
+          @media (max-width: 1100px) {
+            font-size: 35px;
+          }
         }
       }
     }
+    .coordonnees {
+      width: 33, 3%;
 
-    .fondateur_contact,
+      .fondateur_contact {
+        list-style: none;
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 15px;
+
+        li {
+          margin: 15px 0;
+          font-size: 23px;
+          color: white;
+          margin-bottom: 0rem !important;
+
+          @media (max-width: 1100px) {
+            font-size: 14px;
+            padding-top: 0;
+          }
+        }
+        .titre_fondateur {
+          font-weight: bold;
+          padding-top: 29%;
+
+          @media (max-width: 1100px) {
+            padding-top: 0;
+          }
+        }
+      }
+    }
     .siege_contact {
       list-style: none;
       align-items: center;
+      margin-right: 2%;
+      padding-left: 10px;
+
+      @media (max-width: 1100px) {
+        margin-right:7%;
+      }
 
       li {
         margin: 15px 0;
-        font-size: $text-menu;
+        font-size: 30px;
         color: white;
+        margin-bottom: 0rem !important;
+
+        
+        @media (max-width: 1100px) {
+          font-size: 14px;
+        }
+      }
+      .titre_fondateur {
+        font-weight: bold;
       }
     }
   }
-  
+
   .title {
     align-items: center;
     position: fixed;
@@ -85,7 +139,7 @@ header {
     padding: 0 110px;
     width: 100%;
     z-index: 9999;
-    background: linear-gradient(to bottom, #c0c0c0, rgba(255,255,255,0.0001));
+    background: linear-gradient(to bottom, #c0c0c0, rgba(255, 255, 255, 0.0001));
     // background: rgba(0, 0, 0, 0.6);
 
     h1 {
@@ -94,35 +148,32 @@ header {
       font-weight: 700;
       cursor: pointer;
 
-      @media screen and (max-width: 1100px) {
-        font-size: 90px;
-      }
+      // @media screen and (max-width: 1100px) {
+      //   font-size: 90px;
+      // }
 
-      @media (min-width: 576px) and (max-width:768px) {
-        
-        font-size: 65px;
-      }
+      // @media (min-width: 576px) and (max-width: 768px) {
+      //   font-size: 65px;
+      // }
 
-      @media (max-width: 575px)  {
-        
-        font-size: 72px;
-      }
+      // @media (max-width: 575px) {
+      //   font-size: 72px;
+      // }
     }
 
-    .burger{
-
+    .burger {
       z-index: 9999;
     }
 
-    .fa-bars, .fa-times {
+    .fa-bars,
+    .fa-times {
       font-size: 32px;
       cursor: pointer;
       color: white;
       z-index: 9999;
     }
 
-    .fa-times{
-
+    .fa-times {
       display: none;
     }
 
@@ -132,13 +183,11 @@ header {
       margin-right: 10px;
     }
 
-    @media (min-width: 576px) and (max-width:768px) {
-      
+    @media (min-width: 576px) and (max-width: 768px) {
       padding: 0 38px;
     }
 
     @media (max-width: 575px) {
-      
       padding: 0 34px;
     }
   }
@@ -156,9 +205,12 @@ header {
       padding: 10px;
       margin-bottom: 15px;
 
-      @media screen and (max-width: 990px) {
+      @media screen and (max-width: 1100px) {
         font-size: 35px;
       }
+      // @media (min-width: 990px) and (max-width: 1100px) {
+      //   font-size: 30px;
+      // }
     }
   }
 
