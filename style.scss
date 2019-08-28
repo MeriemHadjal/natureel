@@ -40,42 +40,37 @@ sans-serif;
 }
 
 html {
-    line-height: 0 !important;  
+    // efface le line-height propre à bootstrap
+    line-height: 0 !important;
 }
 
 section {
     height: 100vh;
 }
 
-p, ul {
-    margin-bottom: 0rem !important;
-}
-
 // Règles spécifiques 
-
-#sports_background_before {
-    overflow: hidden;
-    margin-bottom: -103px;
-}
-
-#sports_background_after {
-    overflow: hidden;
-    margin-bottom: -105px;
-}
 
 #sports {
     background-image: url(assets/img/background-sport-dechire-before.png);
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 100px; // a effacer lors de la fusion 
+    margin-bottom: 100px; // a effacer lors de la fusion 
+    height: 100%;
+
+
+    .sports {
+        margin-top: 50px;
+        font-size: 30px;
+        font-family: $roboto;
+        color: #665D51;
+    }
 
     h2 {
         font-family: $segoe;
         font-weight: medium;
-        color: $text-color-white;
+        color: #665D51;
         font-size: 80px;
         text-align: left;
         padding-top: 40px;
@@ -96,7 +91,7 @@ p, ul {
         padding-bottom: 60px;
 
         .trait_petit {
-            border-top: 2px white solid;
+            border-top: 2px #665D51 solid;
             width: 70px;
 
             @media (min-width: 578px) and (max-width: 769px) {
@@ -109,7 +104,7 @@ p, ul {
         }
 
         .trait_grand {
-            border-top: 2px white solid;
+            border-top: 2px #665D51 solid;
             width: 120px;
 
             @media (min-width: 578px) and (max-width: 769px) {
@@ -137,6 +132,9 @@ p, ul {
         a {
             img {
                 height: 192px;
+                opacity: 0.7;
+
+
 
                 @media (min-width: 578px) and (max-width: 769px) {
                     height: 171px;
@@ -148,22 +146,32 @@ p, ul {
             }
 
             img:hover {
-                opacity: 0.6;
+                opacity: 1;
             }
 
             @media (min-width: 578px) and (max-width: 991px) {
-                    margin-top: 100px;
+                margin-top: 100px;
             }
         }
 
-        @media (min-width: 578px) and (max-width: 769px) {
+        img:first-child {
+            // diminution largeur de l'image du poisson car largeur trop importante
+            width: 200px;
+        }
+
+        img:last-child {
+            // pour diminuer les traits sombre de la chaussure par rapport aux autres images
+            opacity: 0.3;
+        }
+
+        @media (min-width: 578px) and (max-width: 768px) {
             padding-bottom: 20px;
         }
 
         @media (max-width: 577px) {
             padding-bottom: 0;
 
-            a:nth-child(2),
+            a:nth-child(2),// espace entre les images pour le support portable
             a:nth-child(3),
             a:last-child {
                 margin-top: 60px;
@@ -171,7 +179,11 @@ p, ul {
         }
     }
 
-
+    @media (max-width: 991px) {
+        height: auto;
+        background-color: $background-vert;
+        background-image: none;
+    }
 }
 
 footer {
@@ -184,7 +196,6 @@ footer {
     width: 100%;
     height: 100px;
 
-  
     .container {
         .row {
             width: 100%;
@@ -218,9 +229,19 @@ footer {
                 color: grey;
             }
 
-            // @media (max-width: 577px) {
-            //     height: 150px;
-            // }
+            @media (max-width: 577px) {
+                height: 150px;
+            }
         }
+    }
+
+    @media (min-width: 769px) and (max-width: 991px) {
+        background-color: $background-noir;
+        background-image: none;
+    }
+
+    @media (max-width: 768px) {
+        background-color: $background-noir;
+        background-image: none;
     }
 }
