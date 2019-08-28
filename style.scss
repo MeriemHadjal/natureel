@@ -39,8 +39,16 @@ sans-serif;
     padding: 0;
 }
 
+html {
+    line-height: 0 !important;  
+}
+
 section {
     height: 100vh;
+}
+
+p, ul {
+    margin-bottom: 0rem !important;
 }
 
 // Règles spécifiques 
@@ -174,11 +182,11 @@ footer {
     color: $text-color-white;
     font-size: 17px;
     width: 100%;
+    height: 100px;
 
+  
     .container {
-
         .row {
-            height: 100px;
             width: 100%;
 
             ul {
@@ -210,9 +218,9 @@ footer {
                 color: grey;
             }
 
-            @media (max-width: 577px) {
-                height: 150px;
-            }
+            // @media (max-width: 577px) {
+            //     height: 150px;
+            // }
         }
     }
 }
