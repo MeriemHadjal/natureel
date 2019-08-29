@@ -31,7 +31,8 @@
 
         <!-- NAVBAR BEGINNING -->
         <div class="title d-flex justify-content-between">
-            <h1>NatuReel</h1>
+           <a href="http://localhost:8080"><h1>NatuReel</h1></a>
+           
             <div class="burger"><i class="fas  fa-bars"></i><i class="fas fa-times"></i></div>
         </div>
         <div class="d-flex justify-content-around align-items-center  container_menu">
@@ -60,7 +61,7 @@
             </ol>
         </div>
 
-        <div class="btn_arrow"><i class="fas fa-angle-double-down"></i></div>
+        <div class="btn_arrow"><a href="#concept"><i class="fas fa-angle-double-down"></i></a></div>
 
         <!-- NAVBAR END -->
     </header>

@@ -71,6 +71,11 @@ h2 {
   }
 }
 
+#concept, #sports, #last_article, #footer, .fa-angle-double-down{
+
+  display: none;
+}
+
 .content_title {
   // traits en dessous du h2
   padding-bottom: 60px;
