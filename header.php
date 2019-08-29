@@ -19,20 +19,17 @@
 
     <?php wp_head(); ?>
 </head>
-
 <body>
-
-    <header class="container-fluid">
+    <header class="container-fluid pl-0 pr-0">
         <div class="filter"></div>
         <video autoplay muted loop id="myVideo">
             <source src="wp-content/themes/natureel/assets/img/ble.mp4" type="video/mp4">
         </video>
-
         <!-- NAVBAR BEGINNING -->
         <div class="header_content d-flex flex-column justify-content-between">
             <div class="pos-f-t">
                 <div class="collapse" id="navbarToggleExternalContent">
-                    <div class=" p-4">
+                    <div class=" p-4 ">
                         <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
                     </div>
                 </div>
@@ -42,8 +39,6 @@
                     </button>
                 </nav>
             </div>
-
-
             <div class="title">
                 <h2>NatuReel</h2>
             </div>
@@ -53,3 +48,5 @@
         </div>
         <!-- NAVBAR END -->
     </header>
+    
+    

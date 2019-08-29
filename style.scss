@@ -16,6 +16,7 @@ $segoe: 'Segoe UI',
 sans-serif;
 $roboto: 'Roboto',
 sans-serif;
+$vert: #C3D8BB;
 
 // HEADER BEGINNING
 
@@ -41,15 +42,30 @@ header {
     }
 
     .pos-f-t {
+
         .menu {
             width: 90vw;
             height: 150px;
             // background: rgba(0, 0, 0, 0.4);
             align-items: center !important;
 
+
             ul {
                 display: flex;
                 justify-content: flex-end;
+
+                @media (min-width:320px) and (max-width: 500px) {
+                    background: rgba(0, 0, 0, 0.3);
+                    margin-left: 65%;
+                    padding-right: 1%
+                }
+
+                @media (min-width:500px) and (max-width: 1100px) {
+                    background: rgba(0, 0, 0, 0.3);
+                    margin-left: 75%;
+                    padding-right: 1%
+                }
+
 
                 li {
                     z-index: 99;
@@ -57,17 +73,43 @@ header {
                     list-style: none;
                     font-size: $text-menu;
 
+                    @media screen and (max-width: 1100px) {
+                        font-size: 12px;
+
+                    }
+
                     a {
                         color: white;
                         text-decoration: none;
+                        font-weight: 600;
+
                     }
 
-                    @media screen and (max-width: 1000px) {
+                    a:hover {
+
+                        color: $vert;
+                    }
+
+                    @media screen and (max-width: 1100px) {
                         margin: 20px 0;
                     }
                 }
 
-                @media screen and (max-width: 1000px) {
+                li:after {
+                    content: "|";
+                    margin-left: 15px;
+                    color: white;
+
+                    @media screen and (max-width: 1100px) {
+                        content: "";
+                    }
+                }
+
+                li:nth-child(5):after {
+                    content: "";
+                }
+
+                @media screen and (max-width: 1100px) {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
@@ -80,12 +122,13 @@ header {
             .burger {
                 .fa-bars {
                     color: white;
+                    font-size: 32px;
                 }
+
+
             }
         }
     }
-
-
 
 
     .header_content {
@@ -102,25 +145,35 @@ header {
                 font-family: $segoe;
                 font-weight: bold;
 
-                @media screen and (max-width : 990px) {
+                @media screen and (max-width :1100px) {
                     font-size: 90px;
                 }
             }
         }
 
         .btn_arrow {
+            @media (min-width:320px) and (max-width: 500px) {
+                font-size: 30px;
+            }
+
             .fa-angle-double-down {
                 color: white;
                 font-size: 70px;
                 border: 4px solid green;
                 border-radius: 50% 0 50% 0;
-                padding: 10px;
+                padding: 15px;
                 margin-bottom: 15px;
                 cursor: pointer;
 
-                @media screen and (max-width : 990px){
+                @media screen and (max-width : 1100px) {
                     font-size: 35px;
                 }
+            }
+
+            .fa-angle-double-down:hover {
+
+                color: green;
+                border-color: white;
             }
         }
     }
