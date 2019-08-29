@@ -1,22 +1,25 @@
-//script effet trait sous titre h2
+// VARIABLES
+var menu = document.querySelector('.container_menu');
+var burgerOpen = document.querySelector('.fa-bars');
+var burgerClose = document.querySelector('.fa-times');
 
-// var concept = document.querySelector('#concept');
-// concept.addEventListener('mouseover', changeDesign);
+//EVENTS
 
-// function changeDesign() {
-// //variables de ma function
-// var contentTrait = document.querySelector('.content_trait');
-// var traitPetit = document.querySelector('.trait_petit');
-// var traitGrand = document.querySelector('.trait_grand');
-// var contentTitle = document.querySelector('.content_title');
+burgerOpen.addEventListener('click', function(){
 
-// // console.log(titleConcept);
-// //modification de mon css
-// contentTrait.style.transition = "all 1s";
-// contentTrait.style.width = "100%";
-// traitPetit.style.marginLeft = "auto";
-// traitGrand.style.marginLeft = "50px";
-// traitGrand.style.marginRight = "auto";
-// contentTitle.style.transition = "all 1s";
-// contentTitle.style.alignItems = "center";
-// }
+  menu.style.top = "0";
+  menu.style.transition = "0.5s";
+  burgerOpen.style.display = "none";
+  burgerClose.style.display = "block";
+
+});
+
+burgerClose.addEventListener('click', function(){
+
+    menu.style.top = "-1000px";
+    menu.style.transition = "0.5s";
+    burgerClose.style.display = "none";
+    burgerOpen.style.display = "block";
+  });
+
+

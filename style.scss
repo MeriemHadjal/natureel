@@ -1,109 +1,551 @@
-//Mes Variables
-$background-vert: #c3d8bb;
-$background-noir: #222421;
-$text-color: #222421;
-$text-size: 14px;
-$text-titre: 20px;
-$segoe: "Segoe UI", sans-serif;
-$roboto: "Roboto", sans-serif;
+// Media quéries 
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
 
-//Règles Générales
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// VARIABLES
+$background-vert: #C3D8BB;
+$background-noir: #222421;
+$text-color-noir: #222421;
+$text-noir: #222421;
+$text-color-white: white;
+$white: white;
+$text-content: 14px;
+$text-size: 14px;
+$text-menu: 24px;
+$text-titre : 20px;
+$text-menu: 36px;
+$text-titre-principal: 100px;
+$segoe: 'Segoe UI',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;  
+
+// Règles générales 
+
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    // efface le line-height propre à bootstrap
+    line-height: 0 !important;
+}
+
+ul {
+
+    li {
+        list-style: none;
+    }
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
+
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 h2 {
-  font-size: 80px;
-  font-family: $segoe;
+    font-size: 80px;
+    font-family: $segoe;
+    font-weight: medium;
+    color: #665D51;
+    text-align: left;
+    padding-top: 80px;
+
+    @media (min-width: 578px) and (max-width: 769px) {
+        font-size: 60px;
+    }
+
+    @media (max-width: 577px) {
+        font-size: 40px;
+    }
 }
 
-.content_title {
-  padding-top: 80px;
-  padding-bottom: 80px;
+.content_title { // traits en dessous du h2
+    padding-bottom: 60px;
 
-  .content_trait {
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    .trait_petit {
-      border-top: 2px black solid;
-      width: 70px;
-    }
-    .trait_grand {
-      border-top: 2px black solid;
-      width: 120px;
-    }
-  }
-}
+    .content_trait {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
 
-#concept {
-  height: 100vh;
-  .content_text {
-    p {
-      padding-top: 40px;
-    }
-  }
-}
+        .trait_petit {
+            border-top: 2px  #665D51 solid;
+            width: 70px;
 
-#last_article {
-  height: 100vh;
-  margin: 80px 0;
+            @media (min-width: 578px) and (max-width: 769px) {
+                width: 52px;
+            }
 
-  .container {
-    height: 70%;
-    .row {
-      height: 100%;
+            @media (max-width: 577px) {
+                width: 35px;
+            }
+        }
 
-      article {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-origin: content-box;
-        padding-top: 20px;
+        .trait_grand {
+            border-top: 2px #665D51 solid;
+            width: 120px;
 
-        a {
-          width: 100%;
-          height: 100%;
-          color: white;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          .content_title {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 40px;
-            .content_trait {
-              width: 150px;
-              display: flex;
-              justify-content: space-around;
-              .trait_petit {
-                border-top: 2px $background-vert solid;
-                width: 30px;
-              }
-              .trait_grand {
-                border-top: 2px $background-vert solid;
+            @media (min-width: 578px) and (max-width: 769px) {
+                width: 90px;
+            }
+
+            @media (max-width: 577px) {
                 width: 60px;
+            }
+        }
+
+        @media (min-width: 578px) and (max-width: 769px) {
+            width: 225px;
+        }
+
+        @media (max-width: 577px) {
+            width: 150px;
+        }
+    }
+}
+
+// Règles spécifiques 
+  
+  // HEADER BEGINNING
+  
+  header {
+    min-height: 100vh;
+    font-family: $segoe;
+    overflow: hidden;
+  
+    #myVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -100;
+    }
+  
+    .container_menu {
+      position: fixed;
+      top: -1000px;
+      left: 0;
+      min-height: 100vh;
+      min-width: 100vw;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0 30px;
+  
+      .menu {
+        padding-top: 39px;
+        width: 33.33%;
+  
+        ul {
+          list-style: none;
+          margin-bottom: 0rem !important;
+  
+          li {
+            margin: 15px 0;
+            // font-size: $text-menu;
+            font-size: 60px;
+            color: $white;
+            a {
+              color: $white;
+              font-family: $segoe;
+              text-decoration: none;
+              @media (max-width: 990px) {
+                font-size: 30px;
               }
             }
-          }
-
-          .extrait {
-            padding-left: 200px;
-          }
-          .datePost {
-            margin-bottom: 15px;
-            padding-left: 30px;
+            a:after {
+              content: "|";
+              margin-left: 15px;
+              color: $white;
+            }
+  
+            @media (max-width: 1100px) {
+              font-size: 35px;
+            }
           }
         }
       }
+      .coordonnees {
+        width: 33, 3%;
+  
+        .fondateur_contact {
+          list-style: none;
+          align-items: center;
+          padding-left: 10px;
+          padding-bottom: 15px;
+  
+          li {
+            margin: 15px 0;
+            font-size: 23px;
+            color: $white;
+            margin-bottom: 0rem !important;
+  
+            @media (max-width: 1100px) {
+              font-size: 14px;
+              padding-top: 0;
+            }
+          }
+          .titre_fondateur {
+            font-weight: bold;
+            padding-top: 29%;
+  
+            @media (max-width: 1100px) {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+      .siege_contact {
+        list-style: none;
+        align-items: center;
+        margin-right: 2%;
+        padding-left: 10px;
+  
+        @media (max-width: 1100px) {
+          margin-right:7%;
+        }
+  
+        li {
+          margin: 15px 0;
+          font-size: 30px;
+          color: $white;
+          margin-bottom: 0rem !important;
+  
+          
+          @media (max-width: 1100px) {
+            font-size: 14px;
+          }
+        }
+        .titre_fondateur {
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .title {
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 110px;
+      width: 100%;
+      z-index: 9999;
+      background: linear-gradient(to bottom, #c0c0c0, rgba(255, 255, 255, 0.0001));
+      // background: rgba(0, 0, 0, 0.6);
+  
+      h1 {
+        font-size: $text-titre-principal;
+        color: $white;
+        font-weight: 700;
+        cursor: pointer;
+  
+        // @media screen and (max-width: 1100px) {
+        //   font-size: 90px;
+        // }
+  
+        // @media (min-width: 576px) and (max-width: 768px) {
+        //   font-size: 65px;
+        // }
+  
+        // @media (max-width: 575px) {
+        //   font-size: 72px;
+        // }
+      }
+  
+      .burger {
+        z-index: 9999;
+      }
+  
+      .fa-bars,
+      .fa-times {
+        font-size: 32px;
+        cursor: pointer;
+        color: $white;
+        z-index: 9999;
+      }
+  
+      .fa-times {
+        display: none;
+      }
+  
+      span {
+        font-size: 32px;
+        color: $white;
+        margin-right: 10px;
+      }
+  
+      @media (min-width: 576px) and (max-width: 768px) {
+        padding: 0 38px;
+      }
+  
+      @media (max-width: 575px) {
+        padding: 0 34px;
+      }
+    }
+  
+    .btn_arrow {
+      text-align: center;
+      padding-bottom: 15px;
+  
+      .fa-angle-double-down {
+        cursor: pointer;
+        border: 4px solid green;
+        border-radius: 50% 0 50% 0;
+        font-size: 70px;
+        color: $white;
+        padding: 10px;
+        margin-bottom: 15px;
+  
+        @media screen and (max-width: 1100px) {
+          font-size: 35px;
+        }
+        // @media (min-width: 990px) and (max-width: 1100px) {
+        //   font-size: 30px;
+        // }
+      }
+    }
+  
+    .filter {
+      background: rgba(0, 0, 0, 0.1);
+      z-index: -99;
     }
   }
+
+// CONCEPT BEGINNING
+
+#concept {
+    height: 100vh;
+
+    .content_text {
+        p {
+            padding-top: 40px;
+        }
+    }
+    
+    @media (max-width: 577px) {
+        height: auto;
+    }
+}
+
+// SPORTS BEGINNING
+
+#sports {
+    background-image: url(assets/img/background-sport-dechire-before.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100%;
+
+
+    .sports {
+        margin-top: 50px;
+        font-size: 30px;
+        font-family: $roboto;
+        color: #665D51;
+        width: 100%;
+        text-align: center;
+    }
+
+    #images_sports {
+        margin-top: 6%;
+        padding-bottom: 40px;
+
+        a {
+            img {
+                height: 192px;
+                opacity: 0.7;
+
+
+
+                @media (min-width: 578px) and (max-width: 769px) {
+                    height: 171px;
+                }
+
+                @media (max-width: 577px) {
+                    height: 150px;
+                }
+            }
+
+            img:hover {
+                opacity: 1;
+            }
+
+            @media (min-width: 578px) and (max-width: 991px) {
+                margin-top: 100px;
+            }
+        }
+
+        img:first-child {
+            // diminution largeur de l'image du poisson car largeur trop importante
+            width: 200px;
+        }
+
+        img:last-child {
+            // pour diminuer les traits sombre de la chaussure par rapport aux autres images
+            opacity: 0.3;
+        }
+
+        @media (min-width: 578px) and (max-width: 768px) {
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 577px) {
+            padding-bottom: 0;
+
+            a:nth-child(2),
+            // espace entre les images pour le support portable
+            a:nth-child(3),
+            a:last-child {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        height: auto;
+        background-color: $background-vert;
+        background-image: none;
+    }
+}
+
+// LAST ARTICLE BEGINNING
+
+#last_article {
+    height: 100vh;
+    margin-bottom: 80px;
+    background-image: url(assets/img/background-derniers-articles-dechire.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .container {
+        height: 70%;
+
+        .row {
+            height: 100%;
+
+            article {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                padding-top: 20px;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .content_title {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 40px;
+
+                        .content_trait {
+                            width: 150px;
+                            display: flex;
+                            justify-content: space-around;
+
+                            .trait_petit {
+                                border-top: 2px $background-vert solid;
+                                width: 30px;
+                            }
+
+                            .trait_grand {
+                                border-top: 2px $background-vert solid;
+                                width: 60px;
+                            }
+                        }
+                    }
+
+                    .extrait {
+                        padding-left: 200px;
+                    }
+
+                    .datePost {
+                        margin-bottom: 15px;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 577px) {
+        height: auto;
+    }
+}
+
+// FOOTER BEGINNING
+
+footer {
+    background-image: url(assets/img/background-footer-dechire.png);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $text-color-white;
+    font-size: 17px;
+    width: 100%;
+    height: 100px;
+
+    .container {
+        .row {
+            width: 100%;
+
+            ul {
+                li {
+
+                    a {
+                        i {
+                            font-size: 25px;
+                            margin-right: 20px;
+                        }
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                        color: grey;
+                    }
+                }
+            }
+
+            a {
+                color: white;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: grey;
+            }
+
+            @media (max-width: 577px) {
+                height: 150px;
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 991px) {
+        background-color: $background-noir;
+        background-image: none;
+    }
+
+    @media (max-width: 768px) {
+        background-color: $background-noir;
+        background-image: none;
+    }
 }
