@@ -9,8 +9,6 @@ var footer = document.querySelector('#footer');
 var voir_site = document.querySelector('.fa-angle-double-down');
 var quiSommesNous = document.querySelector('.page-item-200');
 
-
-
 //EVENTS
 
 burgerOpen.addEventListener('click', function () {
@@ -30,7 +28,7 @@ burgerClose.addEventListener('click', function () {
   burgerOpen.style.display = "block";
 });
 
-voir_site.addEventListener('click', function(){
+voir_site.addEventListener('click', function () {
 
   concept.style.display = "block";
   sports.style.display = "block";
@@ -39,12 +37,18 @@ voir_site.addEventListener('click', function(){
   // concept.style.display = "block";
 });
 
-quiSommesNous.addEventListener('click', function () {
+var test = document.querySelector('.page-item-200');
 
-  window.stop();
+test.addEventListener('click', function (Event) {
+  Event.preventDefault();
+  menu.style.top = "-1000px";
+  menu.style.transition = "0.5s";
+  burgerClose.style.display = "none";
+  burgerOpen.style.display = "block";
   concept.style.display = "block";
   sports.style.display = "block";
   last_article.style.display = "block";
   footer.style.display = "block";
-  console.log('dshdfqkjnds;');
+  window.location.hash = '#concept';
 });
+
