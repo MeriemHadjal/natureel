@@ -19,34 +19,48 @@
 
     <?php wp_head(); ?>
 </head>
+
 <body>
-    <header class="container-fluid pl-0 pr-0">
-        <div class="filter"></div>
+
+    <header class="container-fluid d-flex flex-column justify-content-between">
         <video autoplay muted loop id="myVideo">
             <source src="wp-content/themes/natureel/assets/img/ble.mp4" type="video/mp4">
         </video>
+
+        <div class="filter"></div>
+
         <!-- NAVBAR BEGINNING -->
-        <div class="header_content d-flex flex-column justify-content-between">
-            <div class="pos-f-t">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class=" p-4 ">
-                        <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
-                    </div>
-                </div>
-                <nav class="navbar">
-                    <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i class="fas fa-bars"></i></span>
-                    </button>
-                </nav>
-            </div>
-            <div class="title">
-                <h2>NatuReel</h2>
-            </div>
-            <div class="btn_arrow">
-                <i class="fas fa-angle-double-down"></i>
-            </div>
+        <div class="title d-flex justify-content-between">
+            <h1>NatuReel</h1>
+            <div class="burger"><i class="fas  fa-bars"></i><i class="fas fa-times"></i></div>
         </div>
+        <div class="d-flex justify-content-around align-items-center  container_menu">
+
+            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+            <div class="coordonnees d-flex flex-column justify-content-between">
+                <ul class="fondateur_contact">
+                    <li class="titre_fondateur">Fondateur</li>
+                    <li>6 Rue blabla 25000 Besançon</li>
+                    <li>06 00 00 00 00</li>
+                    <li>natureel@pro.com</li>
+                </ul>
+
+                <ul class="fondateur_contact">
+                    <li class="titre_fondateur">Fondateur</li>
+                    <li>6 Rue blabla 25000 Besançon</li>
+                    <li>06 00 00 00 00</li>
+                    <li>natureel@pro.com</li>
+                </ul>
+            </div>
+            <ol class="siege_contact">
+                <li class="titre_fondateur">Association NatuReel</li>
+                <li>6 Rue blabla 25000 Besançon</li>
+                <li>06 00 00 00 00 </li>
+                <li>natureel@pro.com</li>
+            </ol>
+        </div>
+
+        <div class="btn_arrow"><a href=#concept><i class="fas fa-angle-double-down"></i></a></div>
+
         <!-- NAVBAR END -->
     </header>
-    
-    

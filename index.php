@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+?>
 
+<h1>index</h1>
 
-    <h1>Test INDEX</h1>
+<?php 
+
+get_footer();
+
+?>
