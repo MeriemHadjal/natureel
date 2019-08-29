@@ -7,6 +7,10 @@ html {
   line-height: 0 !important;
 }
 
+#concept, #sports, #last_article, #footer, .fa-angle-double-down {
+  display: none;
+}
+
 ul li {
   list-style: none;
 }
