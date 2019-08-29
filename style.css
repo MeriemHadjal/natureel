@@ -343,6 +343,8 @@ header .filter {
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   color: #665D51;
+  width: 100%;
+  text-align: center;
 }
 
 #sports #images_sports {
