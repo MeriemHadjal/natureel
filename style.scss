@@ -527,6 +527,37 @@ header {
   }
 }
 
+// SECTION BIEN MANGER BEGINNING
+
+#bien-manger {
+  height: 100vh;
+
+  .row {
+    height: 100%;
+
+    .bien_manger_article_principale {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .bien_manger_article_secondaire {
+      height: 49%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 // FOOTER BEGINNING
 
 footer {

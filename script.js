@@ -7,7 +7,7 @@ var sports = document.querySelector('#sports');
 var last_article = document.querySelector('#last_article');
 var footer = document.querySelector('#footer');
 var voir_site = document.querySelector('.fa-angle-double-down');
-var quiSommesNous = document.querySelector('.page-item-200');
+var quiSommesNous = document.querySelector('.page-item-140');
 
 //EVENTS
 
@@ -37,20 +37,64 @@ voir_site.addEventListener('click', function () {
   // concept.style.display = "block";
 });
 
-var test = document.querySelector('.page-item-140');
 
-test.addEventListener('click', function (Event) {
-  Event.preventDefault();
-  menu.style.top = "-1000px";
-  menu.style.transition = "0.5s";
-  burgerClose.style.display = "none";
-  burgerOpen.style.display = "block";
-  concept.style.display = "block";
-  sports.style.display = "block";
-  last_article.style.display = "block";
-  footer.style.display = "block";
-  window.location.hash = '#concept';
+// quiSommesNous.addEventListener('click', function (Event) {
+//   Event.preventDefault();
+//   menu.style.top = "-1000px";
+//   menu.style.transition = "0.5s";
+//   burgerClose.style.display = "none";
+//   burgerOpen.style.display = "block";
+//   concept.style.display = "block";
+//   sports.style.display = "block";
+//   last_article.style.display = "block";
+//   footer.style.display = "block";
+//   window.location.hash = '#concept';
+ 
+// });
+
+
+//SCROLL
+
+jQuery.post(
+  ajaxurl,
+  {
+    'action': 'mon_action_cuisine',
+    // 'param': 'coucou'
+  },
+
+  function (response) {
+    jQuery('.somewhere_cuisine').append(response);
+  }
+);
+
+// fonction load_more
+
+var offsetCuisine = 3;
+
+jQuery(window).scroll(function () {
+
+  console.log('Document Height: ' + jQuery(document).height() + 'px');
+  console.log('Window Height: ' +jQuery(window).height() + 'px');
+  console.log('WINDOWS SCROLL TOP --> ' + jQuery(window).scrollTop());
+  // console.log('DOCUMENT HEIGHT --> ' + (jQuery(document).height() - jQuery(window).height()));
+  console.log('Document height - windows heigh = ' + (jQuery(document).height() - jQuery(window).height()) + 'px');
+
+  console.log('-____________________________________________________________________________________________________________-');
+  if (jQuery(window).scrollTop() == jQuery(document).height() - jQuery(window).height()) {
+    // console.log('OUAI');
+
+    jQuery.post(
+      ajaxurl,
+      {
+        'action': 'load_more_cuisine',
+        'offset': offsetCuisine
+      },
+
+      function (response) {
+        offsetCuisine = offsetCuisine + 3;
+        jQuery('.a_la_suite_cuisine').append(response);
+        // console.log(response);
+      }
+    );
+  }
 });
-
-
-

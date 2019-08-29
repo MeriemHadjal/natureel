@@ -538,6 +538,35 @@ header .filter {
   }
 }
 
+#bien-manger {
+  height: 100vh;
+}
+
+#bien-manger .row {
+  height: 100%;
+}
+
+#bien-manger .row .bien_manger_article_principale {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+#bien-manger .row .bien_manger_article_principale a {
+  text-decoration: none;
+  color: white;
+}
+
+#bien-manger .row .bien_manger_article_secondaire {
+  height: 49%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
 footer {
   background-image: url(assets/img/background-footer-dechire.png);
   background-size: 100% auto;
