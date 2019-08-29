@@ -1,20 +1,122 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+// Media quéries
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
 
 // VARIABLES
-
 $background-vert: #c3d8bb;
 $background-noir: #222421;
-$text-color: #222421;
-$text-size: 14px;
-$text-titre: 20px;
-$text-titre-principal: 100px;
-$text-menu: 36px;
+$text-color-noir: #222421;
+$text-noir: #222421;
+$text-color-white: white;
 $white: white;
+$text-content: 14px;
+$text-size: 14px;
+$text-menu: 24px;
+$text-titre: 20px;
+$text-menu: 36px;
+$text-titre-principal: 100px;
 $segoe: "Segoe UI", sans-serif;
 $roboto: "Roboto", sans-serif;
+
+// Règles générales
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // efface le line-height propre à bootstrap
+  line-height: 0 !important;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: $segoe;
+  font-weight: medium;
+  color: #665d51;
+  text-align: left;
+  padding-top: 80px;
+
+  @media (min-width: 578px) and (max-width: 769px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 577px) {
+    font-size: 40px;
+  }
+}
+
+.content_title {
+  // traits en dessous du h2
+  padding-bottom: 60px;
+
+  .content_trait {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+
+    .trait_petit {
+      border-top: 2px #665d51 solid;
+      width: 70px;
+
+      @media (min-width: 578px) and (max-width: 769px) {
+        width: 52px;
+      }
+
+      @media (max-width: 577px) {
+        width: 35px;
+      }
+    }
+
+    .trait_grand {
+      border-top: 2px #665d51 solid;
+      width: 120px;
+
+      @media (min-width: 578px) and (max-width: 769px) {
+        width: 90px;
+      }
+
+      @media (max-width: 577px) {
+        width: 60px;
+      }
+    }
+
+    @media (min-width: 578px) and (max-width: 769px) {
+      width: 225px;
+    }
+
+    @media (max-width: 577px) {
+      width: 150px;
+    }
+  }
+}
+
+// Règles spécifiques
 
 // HEADER BEGINNING
 
@@ -53,9 +155,9 @@ header {
           margin: 15px 0;
           // font-size: $text-menu;
           font-size: 60px;
-          color: white;
+          color: $white;
           a {
-            color: white;
+            color: $white;
             font-family: $segoe;
             text-decoration: none;
             @media (max-width: 990px) {
@@ -71,7 +173,16 @@ header {
           @media (max-width: 1100px) {
             font-size: 35px;
           }
+
+          @media (max-width: 1730px) {
+            font-size: 46px;
+          }
         }
+      }
+
+      @media (max-width: 1366px){
+
+        width: 100%;
       }
     }
     .coordonnees {
@@ -86,12 +197,16 @@ header {
         li {
           margin: 15px 0;
           font-size: 23px;
-          color: white;
+          color: $white;
           margin-bottom: 0rem !important;
 
           @media (max-width: 1100px) {
             font-size: 14px;
             padding-top: 0;
+          }
+
+          @media (max-width: 1366px) {
+            font-size: 18px;
           }
         }
         .titre_fondateur {
@@ -102,6 +217,10 @@ header {
             padding-top: 0;
           }
         }
+
+        @media (max-width: 1366px) {
+          display: none;
+        }
       }
     }
     .siege_contact {
@@ -111,18 +230,25 @@ header {
       padding-left: 10px;
 
       @media (max-width: 1100px) {
-        margin-right:7%;
+        margin-right: 7%;
+      }
+
+      @media (max-width: 1366px) {
+        display: none;
       }
 
       li {
         margin: 15px 0;
         font-size: 30px;
-        color: white;
+        color: $white;
         margin-bottom: 0rem !important;
 
-        
         @media (max-width: 1100px) {
           font-size: 14px;
+        }
+
+        @media (max-width: 1366px) {
+          font-size: 23px;
         }
       }
       .titre_fondateur {
@@ -169,7 +295,7 @@ header {
     .fa-times {
       font-size: 32px;
       cursor: pointer;
-      color: white;
+      color: $white;
       z-index: 9999;
     }
 
@@ -179,16 +305,29 @@ header {
 
     span {
       font-size: 32px;
-      color: white;
+      color: $white;
       margin-right: 10px;
     }
 
-    @media (min-width: 576px) and (max-width: 768px) {
-      padding: 0 38px;
+    // @media (min-width: 576px) and (max-width: 768px) {
+    //   padding: 0 38px;
+    // }
+
+    // @media (max-width: 575px) {
+    //   padding: 0 34px;
+    // }
+
+    @media (max-width: 1366px) {
+      padding: 0 22px;
     }
 
-    @media (max-width: 575px) {
-      padding: 0 34px;
+    @media( min-width: 1367px) and (max-width: 1719px){
+
+      padding: 0 49px;
+    }
+
+    @media (min-width: 1720px) and (max-width: 1903px) {
+      padding: 0 89px;
     }
   }
 
@@ -217,5 +356,227 @@ header {
   .filter {
     background: rgba(0, 0, 0, 0.1);
     z-index: -99;
+  }
+}
+
+// CONCEPT BEGINNING
+
+#concept {
+  height: 100vh;
+
+  .content_text {
+    p {
+      padding-top: 40px;
+    }
+  }
+
+  @media (max-width: 577px) {
+    height: auto;
+  }
+}
+
+// SPORTS BEGINNING
+
+#sports {
+  background-image: url(assets/img/background-sport-dechire-before.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  .sports {
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: $roboto;
+    color: #665d51;
+    width: 100%;
+    text-align: center;
+  }
+
+  #images_sports {
+    margin-top: 6%;
+    padding-bottom: 40px;
+
+    a {
+      img {
+        height: 192px;
+        opacity: 0.7;
+
+        @media (min-width: 578px) and (max-width: 769px) {
+          height: 171px;
+        }
+
+        @media (max-width: 577px) {
+          height: 150px;
+        }
+      }
+
+      img:hover {
+        opacity: 1;
+      }
+
+      @media (min-width: 578px) and (max-width: 991px) {
+        margin-top: 100px;
+      }
+    }
+
+    img:first-child {
+      // diminution largeur de l'image du poisson car largeur trop importante
+      width: 200px;
+    }
+
+    img:last-child {
+      // pour diminuer les traits sombre de la chaussure par rapport aux autres images
+      opacity: 0.3;
+    }
+
+    @media (min-width: 578px) and (max-width: 768px) {
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 577px) {
+      padding-bottom: 0;
+
+      a:nth-child(2),
+            // espace entre les images pour le support portable
+            a:nth-child(3),
+            a:last-child {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    height: auto;
+    background-color: $background-vert;
+    background-image: none;
+  }
+}
+
+// LAST ARTICLE BEGINNING
+
+#last_article {
+  height: 100vh;
+  margin-bottom: 80px;
+  background-image: url(assets/img/background-derniers-articles-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .container {
+    height: 70%;
+
+    .row {
+      height: 100%;
+
+      article {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        padding-top: 20px;
+
+        a {
+          width: 100%;
+          height: 100%;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .content_title {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+
+            .content_trait {
+              width: 150px;
+              display: flex;
+              justify-content: space-around;
+
+              .trait_petit {
+                border-top: 2px $background-vert solid;
+                width: 30px;
+              }
+
+              .trait_grand {
+                border-top: 2px $background-vert solid;
+                width: 60px;
+              }
+            }
+          }
+
+          .extrait {
+            padding-left: 200px;
+          }
+
+          .datePost {
+            margin-bottom: 15px;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 577px) {
+    height: auto;
+  }
+}
+
+// FOOTER BEGINNING
+
+footer {
+  background-image: url(assets/img/background-footer-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: $text-color-white;
+  font-size: 17px;
+  width: 100%;
+  height: 100px;
+
+  .container {
+    .row {
+      width: 100%;
+
+      ul {
+        li {
+          a {
+            i {
+              font-size: 25px;
+              margin-right: 20px;
+            }
+          }
+
+          a:hover {
+            text-decoration: none;
+            color: grey;
+          }
+        }
+      }
+
+      a {
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: grey;
+      }
+
+      @media (max-width: 577px) {
+        height: 150px;
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 991px) {
+    background-color: $background-noir;
+    background-image: none;
+  }
+
+  @media (max-width: 768px) {
+    background-color: $background-noir;
+    background-image: none;
   }
 }

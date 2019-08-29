@@ -1,6 +1,103 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 80px;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: medium;
+  color: #665d51;
+  text-align: left;
+  padding-top: 80px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 577px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.content_title {
+  padding-bottom: 60px;
+}
+
+.content_title .content_trait {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_title .content_trait .trait_petit {
+  border-top: 2px #665d51 solid;
+  width: 70px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait .trait_petit {
+    width: 52px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait .trait_petit {
+    width: 35px;
+  }
+}
+
+.content_title .content_trait .trait_grand {
+  border-top: 2px #665d51 solid;
+  width: 120px;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait .trait_grand {
+    width: 90px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait .trait_grand {
+    width: 60px;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  .content_title .content_trait {
+    width: 225px;
+  }
+}
+
+@media (max-width: 577px) {
+  .content_title .content_trait {
+    width: 150px;
+  }
 }
 
 header {
@@ -68,6 +165,18 @@ header .container_menu .menu ul li a:after {
   }
 }
 
+@media (max-width: 1730px) {
+  header .container_menu .menu ul li {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 1366px) {
+  header .container_menu .menu {
+    width: 100%;
+  }
+}
+
 header .container_menu .coordonnees {
   width: 33, 3%;
 }
@@ -95,6 +204,12 @@ header .container_menu .coordonnees .fondateur_contact li {
   }
 }
 
+@media (max-width: 1366px) {
+  header .container_menu .coordonnees .fondateur_contact li {
+    font-size: 18px;
+  }
+}
+
 header .container_menu .coordonnees .fondateur_contact .titre_fondateur {
   font-weight: bold;
   padding-top: 29%;
@@ -103,6 +218,12 @@ header .container_menu .coordonnees .fondateur_contact .titre_fondateur {
 @media (max-width: 1100px) {
   header .container_menu .coordonnees .fondateur_contact .titre_fondateur {
     padding-top: 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  header .container_menu .coordonnees .fondateur_contact {
+    display: none;
   }
 }
 
@@ -121,6 +242,12 @@ header .container_menu .siege_contact {
   }
 }
 
+@media (max-width: 1366px) {
+  header .container_menu .siege_contact {
+    display: none;
+  }
+}
+
 header .container_menu .siege_contact li {
   margin: 15px 0;
   font-size: 30px;
@@ -131,6 +258,12 @@ header .container_menu .siege_contact li {
 @media (max-width: 1100px) {
   header .container_menu .siege_contact li {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1366px) {
+  header .container_menu .siege_contact li {
+    font-size: 23px;
   }
 }
 
@@ -181,15 +314,21 @@ header .title span {
   margin-right: 10px;
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (max-width: 1366px) {
   header .title {
-    padding: 0 38px;
+    padding: 0 22px;
   }
 }
 
-@media (max-width: 575px) {
+@media (min-width: 1367px) and (max-width: 1719px) {
   header .title {
-    padding: 0 34px;
+    padding: 0 49px;
+  }
+}
+
+@media (min-width: 1720px) and (max-width: 1903px) {
+  header .title {
+    padding: 0 89px;
   }
 }
 
@@ -217,5 +356,235 @@ header .btn_arrow .fa-angle-double-down {
 header .filter {
   background: rgba(0, 0, 0, 0.1);
   z-index: -99;
+}
+
+#concept {
+  height: 100vh;
+}
+
+#concept .content_text p {
+  padding-top: 40px;
+}
+
+@media (max-width: 577px) {
+  #concept {
+    height: auto;
+  }
+}
+
+#sports {
+  background-image: url(assets/img/background-sport-dechire-before.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#sports .sports {
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #665d51;
+  width: 100%;
+  text-align: center;
+}
+
+#sports #images_sports {
+  margin-top: 6%;
+  padding-bottom: 40px;
+}
+
+#sports #images_sports a img {
+  height: 192px;
+  opacity: 0.7;
+}
+
+@media (min-width: 578px) and (max-width: 769px) {
+  #sports #images_sports a img {
+    height: 171px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports #images_sports a img {
+    height: 150px;
+  }
+}
+
+#sports #images_sports a img:hover {
+  opacity: 1;
+}
+
+@media (min-width: 578px) and (max-width: 991px) {
+  #sports #images_sports a {
+    margin-top: 100px;
+  }
+}
+
+#sports #images_sports img:first-child {
+  width: 200px;
+}
+
+#sports #images_sports img:last-child {
+  opacity: 0.3;
+}
+
+@media (min-width: 578px) and (max-width: 768px) {
+  #sports #images_sports {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 577px) {
+  #sports #images_sports {
+    padding-bottom: 0;
+  }
+  #sports #images_sports a:nth-child(2),
+  #sports #images_sports a:nth-child(3),
+  #sports #images_sports a:last-child {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  #sports {
+    height: auto;
+    background-color: #c3d8bb;
+    background-image: none;
+  }
+}
+
+#last_article {
+  height: 100vh;
+  margin-bottom: 80px;
+  background-image: url(assets/img/background-derniers-articles-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#last_article .container {
+  height: 70%;
+}
+
+#last_article .container .row {
+  height: 100%;
+}
+
+#last_article .container .row article {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#last_article .container .row article a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#last_article .container .row article a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#last_article .container .row article a .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#last_article .container .row article a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 30px;
+}
+
+#last_article .container .row article a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#last_article .container .row article a .extrait {
+  padding-left: 200px;
+}
+
+#last_article .container .row article a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+@media (max-width: 577px) {
+  #last_article {
+    height: auto;
+  }
+}
+
+footer {
+  background-image: url(assets/img/background-footer-dechire.png);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 17px;
+  width: 100%;
+  height: 100px;
+}
+
+footer .container .row {
+  width: 100%;
+}
+
+footer .container .row ul li a i {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+footer .container .row ul li a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+footer .container .row a {
+  color: white;
+}
+
+footer .container .row a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+@media (max-width: 577px) {
+  footer .container .row {
+    height: 150px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  footer {
+    background-color: #222421;
+    background-image: none;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    background-color: #222421;
+    background-image: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
