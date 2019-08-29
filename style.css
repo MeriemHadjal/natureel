@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 h2 {
   font-size: 80px;
   font-family: "Segoe UI", sans-serif;
@@ -42,22 +51,47 @@ h2 {
 
 #last_article {
   height: 100vh;
+  margin: 80px 0;
 }
 
-#last_article article {
-  padding-bottom: 80px;
+#last_article .container {
+  height: 70%;
 }
 
-#last_article article .content_title {
-  position: absolute;
-  z-index: 5;
-  left: 120px;
-  top: 10px;
+#last_article .container .row {
+  height: 100%;
+}
+
+#last_article .container .row article {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#last_article .container .row article a {
+  width: 100%;
+  height: 100%;
   color: white;
-  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#last_article article .content_title .content_trait {
+#last_article .container .row article a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#last_article .container .row article a .content_title .content_trait {
   width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,38 +100,22 @@ h2 {
       justify-content: space-around;
 }
 
-#last_article article .content_title .content_trait .trait_petit {
-  border-top: 2px #C3D8BB solid;
+#last_article .container .row article a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
   width: 30px;
 }
 
-#last_article article .content_title .content_trait .trait_grand {
-  border-top: 2px #C3D8BB solid;
+#last_article .container .row article a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
   width: 60px;
 }
 
-#last_article article .thumb {
-  position: relative;
-  text-align: center;
+#last_article .container .row article a .extrait {
+  padding-left: 200px;
 }
 
-#last_article article .thumb img {
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-
-#last_article article .extrait {
-  cursor: pointer;
-  position: absolute;
-  bottom: 160px;
-  left: 200px;
-  color: white;
-}
-
-#last_article article .datePost {
-  position: absolute;
-  bottom: 80px;
-  left: 130px;
-  color: white;
+#last_article .container .row article a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
 }
 /*# sourceMappingURL=style.css.map */

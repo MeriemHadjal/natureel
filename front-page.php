@@ -47,7 +47,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="row">                     
+    <div class="row justify-content-between">                     
         <?php
         
         $post = array(
@@ -59,33 +59,32 @@ get_header(); ?>
 
         $post_query = new WP_Query($post);
         if ($post_query->have_posts()) :
-            while ($post_query->have_posts()) : $post_query->the_post();
-            
+            while ($post_query->have_posts()) : $post_query->the_post();           
             ?>
 
-        <article class="col-12 col-md-6">
-      <div class="content_title">
+        
+<article class="col-12 col-md-6 pr-0" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+<a class="test" href="<?php echo esc_url( get_permalink() ); ?>">
+<div class="content_title">
   <h3 class="title"><?php the_title();?></h3>
         <div class="content_trait">
             <div class="trait_petit"></div>
             <div class="trait_grand"></div>
         </div>
     </div>
-  <div class="thumb">
-            <?php the_post_thumbnail(array(350,250)); ?>
-            </div>
+
             <div class="extrait">
-<a href="">Voir l'article</a>             
+                <!--Lien vers l'article en question-->
+                <?php the_excerpt(); ?>
 </div>
              <p class="datePost"><?php the_modified_date(); ?></p>
            
-       
+             </a>
         </article>
 
         <?php
             endwhile;
-            endif;
-            die(); 
+            endif; 
         ?>
     </div>
 
@@ -94,4 +93,4 @@ get_header(); ?>
 </section>
 
 
-<?php get_footer()?>
+<?php get_footer();?>
