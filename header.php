@@ -60,7 +60,7 @@
             </ol>
         </div>
 
-        <div class="btn_arrow"><a href="#concept"><i class="fas fa-angle-double-down"></i></a></div>
+        <div class="btn_arrow"><i class="fas fa-angle-double-down"></i></div>
 
         <!-- NAVBAR END -->
     </header>
