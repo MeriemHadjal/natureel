@@ -6,7 +6,7 @@ var concept = document.querySelector('#concept');
 var sports = document.querySelector('#sports');
 var last_article = document.querySelector('#last_article');
 var footer = document.querySelector('#footer');
-var voir_site = document.querySelector('.fa-angle-double-down');
+// var voir_site = document.querySelector('.fa-angle-double-down');
 var quiSommesNous = document.querySelector('.page-item-140');
 
 //EVENTS
@@ -28,14 +28,14 @@ burgerClose.addEventListener('click', function () {
   burgerOpen.style.display = "block";
 });
 
-voir_site.addEventListener('click', function () {
+// voir_site.addEventListener('click', function () {
 
-  concept.style.display = "block";
-  sports.style.display = "block";
-  last_article.style.display = "block";
-  footer.style.display = "block";
-  // concept.style.display = "block";
-});
+//   concept.style.display = "block";
+//   sports.style.display = "block";
+//   last_article.style.display = "block";
+//   footer.style.display = "block";
+//   // concept.style.display = "block";
+// });
 
 
 // quiSommesNous.addEventListener('click', function (Event) {
@@ -53,7 +53,7 @@ voir_site.addEventListener('click', function () {
 // });
 
 
-//SCROLL
+//SCROLL cuisine
 
 jQuery.post(
   ajaxurl,
@@ -73,13 +73,6 @@ var offsetCuisine = 3;
 
 jQuery(window).scroll(function () {
 
-  console.log('Document Height: ' + jQuery(document).height() + 'px');
-  console.log('Window Height: ' +jQuery(window).height() + 'px');
-  console.log('WINDOWS SCROLL TOP --> ' + jQuery(window).scrollTop());
-  // console.log('DOCUMENT HEIGHT --> ' + (jQuery(document).height() - jQuery(window).height()));
-  console.log('Document height - windows heigh = ' + (jQuery(document).height() - jQuery(window).height()) + 'px');
-
-  console.log('-____________________________________________________________________________________________________________-');
   if (jQuery(window).scrollTop() == jQuery(document).height() - jQuery(window).height()) {
     // console.log('OUAI');
 
@@ -98,3 +91,43 @@ jQuery(window).scroll(function () {
     );
   }
 });
+
+//SCROLL sport
+
+jQuery.post(
+  ajaxurl,
+  {
+  'action': 'mon_action_sport',
+  // 'param': 'coucou'
+  },
+  
+  function (response) {
+  jQuery('.somewhere_sport').append(response);
+  }
+  
+  );
+  
+  // fonction load_more
+  
+  var offsetSport = 1;
+  
+  jQuery(window).scroll(function () {
+  
+  if (jQuery(window).scrollTop() == jQuery(document).height() - jQuery(window).height()) {
+  // console.log('OUAI');
+  
+  jQuery.post(
+  ajaxurl,
+  {
+  'action': 'load_more_sport',
+  'offset': offsetSport
+  },
+  
+  function (response) {
+  offsetSport = offsetSport + 1;
+  jQuery('.a_la_suite_sport').append(response);
+  // console.log(response);
+  }
+  );
+  }
+  });

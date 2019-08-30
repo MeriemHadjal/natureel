@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header('sport');
 ?>
 <section id="bien-manger" class="container-fluid">
     <div class="row">
@@ -99,6 +99,6 @@ get_header();
 </section>
 <?php
 
-get_footer();
+get_footer('sport');
 
 ?>

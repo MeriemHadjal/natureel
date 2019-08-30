@@ -39,9 +39,9 @@ html {
   line-height: 0 !important;
 }
 
-#concept, #sports, #last_article, #footer, .fa-angle-double-down{
-  display: none;
-}
+// #concept, #sports, #last_article, #footer, .fa-angle-double-down{
+//   display: none;
+// }
 
 ul {
   li {
@@ -121,6 +121,15 @@ h2 {
 }
 
 // Règles spécifiques
+
+//HEADER PAGE SPORT
+.header-sport{
+  min-height: 120px;
+
+  .container_menu{
+    z-index: 100;
+  }
+}
 
 // HEADER BEGINNING
 
@@ -526,6 +535,108 @@ header {
     height: auto;
   }
 }
+
+
+//PAGE SPORT ET NATURE
+#sport{
+  overflow: hidden;
+  article{
+  min-height: 300px;
+  max-height:300px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  
+  
+  .content_head{
+  display: flex;
+  flex-direction: column;
+  
+  .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  
+  .content_trait {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  
+  .trait_petit {
+  border-top: 2px $background-vert solid;
+  width: 30px;
+  }
+  
+  .trait_grand {
+  border-top: 2px $background-vert solid;
+  width: 60px;
+  }
+  }
+  }
+  }
+  
+  .extrait {
+  }
+  
+  .datePost {
+  padding: 20px 50px;
+  }
+  }
+  
+  }
+  
+  .last_article{
+  position: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  
+  
+  .content_head{
+  display: flex;
+  justify-content: space-between;
+  
+  .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  
+  .content_trait {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  
+  .trait_petit {
+  border-top: 2px $background-vert solid;
+  width: 30px;
+  }
+  
+  .trait_grand {
+  border-top: 2px $background-vert solid;
+  width: 60px;
+  }
+  }
+  }
+  }
+  
+  .extrait {
+  }
+  
+  .datePost {
+  padding: 20px 50px;
+  }
+  }
+  }
 
 // SECTION BIEN MANGER BEGINNING
 
