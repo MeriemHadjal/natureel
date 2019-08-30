@@ -36,7 +36,7 @@
         </div>
         <div class="d-flex justify-content-around align-items-center  container_menu">
 
-            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+            <?php wp_nav_menu(); ?>
             <div class="coordonnees d-flex flex-column justify-content-between">
                 <ul class="fondateur_contact">
                     <li class="titre_fondateur">Fondateur</li>

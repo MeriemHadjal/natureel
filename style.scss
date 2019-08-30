@@ -24,8 +24,10 @@ $text-menu: 24px;
 $text-titre: 20px;
 $text-menu: 36px;
 $text-titre-principal: 100px;
-$segoe: "Segoe UI", sans-serif;
-$roboto: "Roboto", sans-serif;
+$segoe: "Segoe UI",
+sans-serif;
+$roboto: "Roboto",
+sans-serif;
 
 // Règles générales
 
@@ -123,10 +125,10 @@ h2 {
 // Règles spécifiques
 
 //HEADER PAGE SPORT
-.header-sport{
+.header-sport {
   min-height: 120px;
 
-  .container_menu{
+  .container_menu {
     z-index: 100;
   }
 }
@@ -169,14 +171,17 @@ header {
           // font-size: $text-menu;
           font-size: 60px;
           color: $white;
+
           a {
             color: $white;
             font-family: $segoe;
             text-decoration: none;
+
             @media (max-width: 990px) {
               font-size: 30px;
             }
           }
+
           a:after {
             content: "|";
             margin-left: 15px;
@@ -193,11 +198,12 @@ header {
         }
       }
 
-      @media (max-width: 1366px){
+      @media (max-width: 1366px) {
 
         width: 100%;
       }
     }
+
     .coordonnees {
       width: 33, 3%;
 
@@ -222,6 +228,7 @@ header {
             font-size: 18px;
           }
         }
+
         .titre_fondateur {
           font-weight: bold;
           padding-top: 29%;
@@ -236,6 +243,7 @@ header {
         }
       }
     }
+
     .siege_contact {
       list-style: none;
       align-items: center;
@@ -264,6 +272,7 @@ header {
           font-size: 23px;
         }
       }
+
       .titre_fondateur {
         font-weight: bold;
       }
@@ -334,7 +343,7 @@ header {
       padding: 0 22px;
     }
 
-    @media( min-width: 1367px) and (max-width: 1719px){
+    @media(min-width: 1367px) and (max-width: 1719px) {
 
       padding: 0 49px;
     }
@@ -360,6 +369,7 @@ header {
       @media screen and (max-width: 1100px) {
         font-size: 35px;
       }
+
       // @media (min-width: 990px) and (max-width: 1100px) {
       //   font-size: 30px;
       // }
@@ -451,9 +461,9 @@ header {
       padding-bottom: 0;
 
       a:nth-child(2),
-            // espace entre les images pour le support portable
-            a:nth-child(3),
-            a:last-child {
+      // espace entre les images pour le support portable
+      a:nth-child(3),
+      a:last-child {
         margin-top: 60px;
       }
     }
@@ -538,105 +548,106 @@ header {
 
 
 //PAGE SPORT ET NATURE
-#sport{
+#sport {
   overflow: hidden;
-  article{
-  min-height: 300px;
-  max-height:300px;
-  padding: 30px;
-  margin-bottom: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  article {
+    min-height: 300px;
+    max-height: 300px;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    a {
+      width: 100%;
+      height: 100%;
+      color: white;
+
+
+      .content_head {
+        display: flex;
+        flex-direction: column;
+
+        .content_title {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 40px;
+
+          .content_trait {
+            width: 150px;
+            display: flex;
+            justify-content: space-around;
+
+            .trait_petit {
+              border-top: 2px $background-vert solid;
+              width: 30px;
+            }
+
+            .trait_grand {
+              border-top: 2px $background-vert solid;
+              width: 60px;
+            }
+          }
+        }
+      }
+
+      .extrait {}
+
+      .datePost {
+        padding: 20px 50px;
+      }
+    }
+
+  }
+
+  .last_article {
+    position: fixed;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   a {
-  width: 100%;
-  height: 100%;
-  color: white;
-  
-  
-  .content_head{
-  display: flex;
-  flex-direction: column;
-  
-  .content_title {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  
-  .content_trait {
-  width: 150px;
-  display: flex;
-  justify-content: space-around;
-  
-  .trait_petit {
-  border-top: 2px $background-vert solid;
-  width: 30px;
+    width: 100%;
+    height: 100%;
+    color: white;
+
+
+    .content_head {
+      display: flex;
+      justify-content: space-between;
+
+      .content_title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+
+        .content_trait {
+          width: 150px;
+          display: flex;
+          justify-content: space-around;
+
+          .trait_petit {
+            border-top: 2px $background-vert solid;
+            width: 30px;
+          }
+
+          .trait_grand {
+            border-top: 2px $background-vert solid;
+            width: 60px;
+          }
+        }
+      }
+    }
+
+    .extrait {}
+
+    .datePost {
+      padding: 20px 50px;
+    }
   }
-  
-  .trait_grand {
-  border-top: 2px $background-vert solid;
-  width: 60px;
-  }
-  }
-  }
-  }
-  
-  .extrait {
-  }
-  
-  .datePost {
-  padding: 20px 50px;
-  }
-  }
-  
-  }
-  
-  .last_article{
-  position: fixed;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
-  a {
-  width: 100%;
-  height: 100%;
-  color: white;
-  
-  
-  .content_head{
-  display: flex;
-  justify-content: space-between;
-  
-  .content_title {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  
-  .content_trait {
-  width: 150px;
-  display: flex;
-  justify-content: space-around;
-  
-  .trait_petit {
-  border-top: 2px $background-vert solid;
-  width: 30px;
-  }
-  
-  .trait_grand {
-  border-top: 2px $background-vert solid;
-  width: 60px;
-  }
-  }
-  }
-  }
-  
-  .extrait {
-  }
-  
-  .datePost {
-  padding: 20px 50px;
-  }
-  }
-  }
+}
 
 // SECTION BIEN MANGER BEGINNING
 
