@@ -31,13 +31,12 @@
 
         <!-- NAVBAR BEGINNING -->
         <div class="title d-flex justify-content-between">
-           <a href="http://localhost:8080"><h1>NatuReel</h1></a>
-           
+            <h1>NatuReel</h1>
             <div class="burger"><i class="fas  fa-bars"></i><i class="fas fa-times"></i></div>
         </div>
         <div class="d-flex justify-content-around align-items-center  container_menu">
 
-            <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'menu')); ?>
+            <?php wp_nav_menu(array()); ?>
             <div class="coordonnees d-flex flex-column justify-content-between">
                 <ul class="fondateur_contact">
                     <li class="titre_fondateur">Fondateur</li>

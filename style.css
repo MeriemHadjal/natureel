@@ -41,10 +41,6 @@ h2 {
   }
 }
 
-#concept, #sports, #last_article, #footer, .fa-angle-double-down {
-  display: none;
-}
-
 .content_title {
   padding-bottom: 60px;
 }
@@ -102,6 +98,14 @@ h2 {
   .content_title .content_trait {
     width: 150px;
   }
+}
+
+.header-sport {
+  min-height: 120px;
+}
+
+.header-sport .container_menu {
+  z-index: 100;
 }
 
 header {
@@ -536,6 +540,275 @@ header .filter {
   #last_article {
     height: auto;
   }
+}
+
+#sport {
+  overflow: hidden;
+}
+
+#sport article {
+  min-height: 300px;
+  max-height: 300px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sport article a {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#sport article a .content_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#sport article a .content_head .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#sport article a .content_head .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#sport article a .content_head .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 30px;
+}
+
+#sport article a .content_head .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#sport article a .datePost {
+  padding: 20px 50px;
+}
+
+#sport .last_article {
+  position: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sport a {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#sport a .content_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#sport a .content_head .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#sport a .content_head .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#sport a .content_head .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 30px;
+}
+
+#sport a .content_head .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#sport a .datePost {
+  padding: 20px 50px;
+}
+
+#bien-manger {
+  height: 100vh;
+}
+
+#bien-manger .row {
+  height: 100%;
+}
+
+#bien-manger .row .bien_manger_article_principal {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+#bien-manger .row .bien_manger_article_principal a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .title {
+  font-size: 80px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 45px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .extrait {
+  padding-left: 200px;
+  font-size: 60px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  font-size: 40px;
+}
+
+#bien-manger .row .bien_manger_article_principal a:hover {
+  color: #c3d8bb;
+}
+
+#bien-manger .row .bien_manger_article_secondaire {
+  height: 49%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .title {
+  font-size: 40px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 45px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .extrait {
+  padding-left: 200px;
+  font-size: 30px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a:hover {
+  color: #c3d8bb;
+}
+
+#bien-manger .row .article_bien_manger_lateral {
+  height: 100%;
+}
+
+#moreCuisine {
+  margin-top: 20px;
 }
 
 footer {

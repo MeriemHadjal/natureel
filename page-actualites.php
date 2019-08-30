@@ -2,7 +2,7 @@
 get_header(); 
 ?>
 
-<h1>Actualités</h1>
+<h1>ACTUALITES</h1>
 
 <?php 
 
