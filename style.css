@@ -100,6 +100,19 @@ h2 {
   }
 }
 
+.bg_header_new {
+  background-image: url(assets/img/ble_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.header-article {
+  min-height: 0vh;
+  min-width: 0%;
+  padding: 0;
+}
+
 .header-sport {
   min-height: 120px;
 }
@@ -659,7 +672,7 @@ header .filter {
   height: 100%;
 }
 
-#bien-manger .row .bien_manger_article_principale {
+#bien-manger .row .bien_manger_article_principal {
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -667,9 +680,68 @@ header .filter {
   margin-bottom: 20px;
 }
 
-#bien-manger .row .bien_manger_article_principale a {
-  text-decoration: none;
+#bien-manger .row .bien_manger_article_principal a {
+  width: 100%;
+  height: 100%;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .title {
+  font-size: 80px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 45px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .extrait {
+  padding-left: 200px;
+  font-size: 60px;
+}
+
+#bien-manger .row .bien_manger_article_principal a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  font-size: 40px;
+}
+
+#bien-manger .row .bien_manger_article_principal a:hover {
+  color: #c3d8bb;
 }
 
 #bien-manger .row .bien_manger_article_secondaire {
@@ -678,6 +750,159 @@ header .filter {
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-top: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .title {
+  font-size: 40px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 45px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .extrait {
+  padding-left: 200px;
+  font-size: 30px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a .datePost {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+#bien-manger .row .bien_manger_article_secondaire a:hover {
+  color: #c3d8bb;
+}
+
+#bien-manger .row .article_bien_manger_lateral {
+  height: 100%;
+}
+
+#moreCuisine {
+  margin-top: 20px;
+}
+
+#moreCuisine .somewhere_cuisine article, #moreCuisine .a_la_suite_cuisine article {
+  min-height: 280px;
+  max-height: 280px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px 29px;
+  max-width: 30, 333% !important;
+}
+
+#moreCuisine .somewhere_cuisine article a, #moreCuisine .a_la_suite_cuisine article a {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#moreCuisine .somewhere_cuisine article a .content_head, #moreCuisine .a_la_suite_cuisine article a .content_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#moreCuisine .somewhere_cuisine article a .content_head .content_title, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_petit, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_petit {
+  border-top: 2px #c3d8bb solid;
+  width: 30px;
+}
+
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_grand, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_grand {
+  border-top: 2px #c3d8bb solid;
+  width: 60px;
+}
+
+#moreCuisine .somewhere_cuisine article a .datePost, #moreCuisine .a_la_suite_cuisine article a .datePost {
+  padding: 20px 50px;
+}
+
+#moreCuisine .somewhere_cuisine article a:hover, #moreCuisine .a_la_suite_cuisine article a:hover {
+  color: #c3d8bb;
+}
+
+#single-post .container .container_menu {
+  background-color: #c0c0c0;
+  color: black;
+}
+
+#single-post .container .bg_article {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  margin-top: 33%;
+}
+
+#single-post .container .bg_article .row .col-12 .article_title {
+  color: white;
+  text-align: center;
+}
+
+#single-post .container .bg_article .row .col-12 .article_content {
+  color: white;
+  padding: 20px;
 }
 
 footer {
@@ -732,5 +957,31 @@ footer .container .row a:hover {
     background-color: #222421;
     background-image: none;
   }
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  display: none;
+  /* Hide columns by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

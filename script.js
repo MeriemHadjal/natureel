@@ -2,16 +2,10 @@
 var menu = document.querySelector('.container_menu');
 var burgerOpen = document.querySelector('.fa-bars');
 var burgerClose = document.querySelector('.fa-times');
-var concept = document.querySelector('#concept');
-var sports = document.querySelector('#sports');
-var last_article = document.querySelector('#last_article');
-var footer = document.querySelector('#footer');
-// var voir_site = document.querySelector('.fa-angle-double-down');
-var quiSommesNous = document.querySelector('.page-item-140');
 
 //EVENTS
 
-burgerOpen.addEventListener('click', function () {
+burgerOpen.addEventListener('click', function(){
 
   menu.style.top = "0";
   menu.style.transition = "0.5s";
@@ -20,41 +14,16 @@ burgerOpen.addEventListener('click', function () {
 
 });
 
-burgerClose.addEventListener('click', function () {
+burgerClose.addEventListener('click', function(){
 
-  menu.style.top = "-1000px";
-  menu.style.transition = "0.5s";
-  burgerClose.style.display = "none";
-  burgerOpen.style.display = "block";
-});
-
-// voir_site.addEventListener('click', function () {
-
-//   concept.style.display = "block";
-//   sports.style.display = "block";
-//   last_article.style.display = "block";
-//   footer.style.display = "block";
-//   // concept.style.display = "block";
-// });
+    menu.style.top = "-1000px";
+    menu.style.transition = "0.5s";
+    burgerClose.style.display = "none";
+    burgerOpen.style.display = "block";
+  });
 
 
-// quiSommesNous.addEventListener('click', function (Event) {
-//   Event.preventDefault();
-//   menu.style.top = "-1000px";
-//   menu.style.transition = "0.5s";
-//   burgerClose.style.display = "none";
-//   burgerOpen.style.display = "block";
-//   concept.style.display = "block";
-//   sports.style.display = "block";
-//   last_article.style.display = "block";
-//   footer.style.display = "block";
-//   window.location.hash = '#concept';
- 
-// });
-
-
-//SCROLL cuisine
-
+//SCROLL
 jQuery.post(
   ajaxurl,
   {
@@ -92,42 +61,91 @@ jQuery(window).scroll(function () {
   }
 });
 
-//SCROLL sport
+
 
 jQuery.post(
   ajaxurl,
   {
-  'action': 'mon_action_sport',
-  // 'param': 'coucou'
+    'action': 'mon_action_sport',
+    // 'param': 'coucou'
   },
-  
+
   function (response) {
-  jQuery('.somewhere_sport').append(response);
+    jQuery('.somewhere_sport').append(response);
   }
-  
-  );
-  
-  // fonction load_more
-  
-  var offsetSport = 1;
-  
-  jQuery(window).scroll(function () {
-  
+);
+
+// fonction load_more
+
+var offsetSport = 1;
+
+jQuery(window).scroll(function () {
+
   if (jQuery(window).scrollTop() == jQuery(document).height() - jQuery(window).height()) {
-  // console.log('OUAI');
-  
-  jQuery.post(
-  ajaxurl,
-  {
-  'action': 'load_more_sport',
-  'offset': offsetSport
-  },
-  
-  function (response) {
-  offsetSport = offsetSport + 1;
-  jQuery('.a_la_suite_sport').append(response);
-  // console.log(response);
+    // console.log('OUAI');
+
+    jQuery.post(
+      ajaxurl,
+      {
+        'action': 'load_more_sport',
+        'offset': offsetSport
+      },
+
+      function (response) {
+        offsetSport = offsetSport + 1;
+        jQuery('.a_la_suite_sport').append(response);
+        // console.log(response);
+      }
+    );
   }
-  );
+});
+
+// filtre sport et nature 
+
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
+}
