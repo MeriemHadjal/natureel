@@ -979,6 +979,11 @@ footer .container .row a:hover {
   cursor: pointer;
 }
 
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
 /* Add a dark background color to the active button */
 .btn.active {
   background-color: #666;

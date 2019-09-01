@@ -2,11 +2,11 @@
 get_header('sport');
 ?>
 <section id="bien-manger" class="container-fluid">
-<div id="filtre_bien_manger">
-  <button class="btn active" onclick="filterSelection('all')"> All</button>
-  <button class="btn" onclick="filterSelection('general')"> générique</button>
-  <button class="btn" onclick="filterSelection('specifique')"> spécifique</button>
-</div>
+    <div id="filtre_bien_manger">
+        <button class="btn active" onclick="filterSelection('all-bien-manger')">all</button>
+        <button class="btn" onclick="filterSelection('cuisine générale')">general</button>
+        <button class="btn" onclick="filterSelection('cuisine spécifique')">spécifique</button>
+    </div>
     <div class="row">
         <?php
 
@@ -26,8 +26,17 @@ get_header('sport');
 
 
 
-                <div class="bien_manger_article_principal column col-8 <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+                <div class="bien_manger_article_principal col-8 column <?php $categories = get_the_category();
+                                                                                if (!empty($categories)) {
+                                                                                    echo esc_html($categories[1]->name);
+                                                                                } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
                     <a href="<?php echo esc_url(get_permalink()); ?>">
+                     <?php
+$categories = get_the_category();
+ 
+if ( ! empty( $categories ) ) {
+    echo esc_html( $categories[1]->name );   
+} ?>
                         <div class="content_title">
                             <h3 class="title"><?php the_title(); ?></h3>
                             <div class="content_trait">
@@ -71,8 +80,17 @@ get_header('sport');
 
 
 
-                    <div class="bien_manger_article_secondaire column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+                    <div class="bien_manger_article_secondaire column <?php $categories = get_the_category();
+                                                                                if (!empty($categories)) {
+                                                                                    echo esc_html($categories[1]->name);
+                                                                                } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
                         <a href="<?php echo esc_url(get_permalink()); ?>">
+                            <?php
+                                    $categories = get_the_category();
+
+                                    if (!empty($categories)) {
+                                        echo esc_html($categories[1]->name);
+                                    } ?>
                             <div class="content_title">
                                 <h3 class="title"><?php the_title(); ?></h3>
                                 <div class="content_trait">

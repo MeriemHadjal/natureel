@@ -1,11 +1,12 @@
 <?php get_header('sport');?>
     
 <section id="sport" class="container-fluid pl-0 pr-0">
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">all</button>
-  <button class="btn" onclick="filterSelection('general')">general</button>
-  <button class="btn" onclick="filterSelection('specifique')">spécifique</button>
+<div id="filtre_sport_nature">
+  <button class="btn active" onclick="filterSelection('all-sport-nature')">all</button>
+  <button class="btn" onclick="filterSelection('sport général')">general</button>
+  <button class="btn" onclick="filterSelection('sport spécifique')">spécifique</button>
 </div>
+
     <div class="row ml-0 mr-0">
 
     <?php
@@ -23,7 +24,7 @@
             while ($post_query->have_posts()) : $post_query->the_post();           
             ?>
 
-         <div class="last_article column col-9 <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+         <div class="last_article col-9 column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
          <a href="<?php echo esc_url( get_permalink() ); ?>">
          <div class="content_head">
          <?php

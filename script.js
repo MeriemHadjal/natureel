@@ -61,7 +61,7 @@ jQuery(window).scroll(function () {
   }
 });
 
-
+// SCROLL
 
 jQuery.post(
   ajaxurl,
@@ -100,13 +100,14 @@ jQuery(window).scroll(function () {
   }
 });
 
-// filtre sport et nature 
 
-filterSelection("all") // Execute the function and show all columns
+// filtre bien-manger
+
+filterSelection("all-bien-manger") // Execute the function and show all columns
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
+  if (c == "all-bien-manger") c = "";
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
@@ -118,7 +119,9 @@ function filterSelection(c) {
 function w3AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
+  console.log(arr1);
   arr2 = name.split(" ");
+  console.log(arr2);
   for (i = 0; i < arr2.length; i++) {
     if (arr1.indexOf(arr2[i]) == -1) {
       element.className += " " + arr2[i];
@@ -140,12 +143,66 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+var btnContainer = document.getElementById("filtre_bien_manger");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    console.log(current);
+  });
+}
+
+
+
+filterSelection("all-sport-nature") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all-sport-nature") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  console.log(arr1);
+  arr2 = name.split(" ");
+  console.log(arr2);
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("filtre_sport_nature");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    console.log(current);
   });
 }
