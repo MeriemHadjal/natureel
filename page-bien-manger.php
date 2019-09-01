@@ -3,9 +3,9 @@ get_header('sport');
 ?>
 <section id="bien-manger" class="container-fluid">
     <div id="filtre_bien_manger">
-        <button class="btn active" onclick="filterSelection('all-bien-manger')">all</button>
-        <button class="btn" onclick="filterSelection('cuisine générale')">general</button>
-        <button class="btn" onclick="filterSelection('cuisine spécifique')">spécifique</button>
+        <button class="btn active" onclick="filterSelectionCuisine('all-bien-manger')">all</button>
+        <button class="btn" onclick="filterSelectionCuisine('cuisine générale')">general</button>
+        <button class="btn" onclick="filterSelectionCuisine('cuisine spécifique')">spécifique</button>
     </div>
     <div class="row">
         <?php
@@ -121,7 +121,10 @@ if ( ! empty( $categories ) ) {
 
 <section id="moreCuisine">
 
-    <div class="row somewhere_cuisine a_la_suite_cuisine">
+    <div class="row somewhere_cuisine a_la_suite_cuisine column <?php $categories = get_the_category();
+                                                                                if (!empty($categories)) {
+                                                                                    echo esc_html($categories[1]->name);
+                                                                                } ?>">
 
     </div>
 </section>

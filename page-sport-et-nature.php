@@ -2,9 +2,9 @@
     
 <section id="sport" class="container-fluid pl-0 pr-0">
 <div id="filtre_sport_nature">
-  <button class="btn active" onclick="filterSelection('all-sport-nature')">all</button>
-  <button class="btn" onclick="filterSelection('sport général')">general</button>
-  <button class="btn" onclick="filterSelection('sport spécifique')">spécifique</button>
+  <button class="btn active" onclick="filterSelectionSport('all-sport-nature')">all</button>
+  <button class="btn" onclick="filterSelectionSport('sport général')">general</button>
+  <button class="btn" onclick="filterSelectionSport('sport spécifique')">spécifique</button>
 </div>
 
     <div class="row ml-0 mr-0">

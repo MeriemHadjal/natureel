@@ -49,7 +49,7 @@ function mon_action_cuisine()
 
     // $url = $_SERVER["HTTP_REFERER"];
     // $url = explode("/", $url);
-
+    
     $args = array(
         'post_type' => 'post', // articles 
         'posts_per_page' => 3,
@@ -63,7 +63,7 @@ function mon_action_cuisine()
 
     if ($ajax_query->have_posts()) :
         while ($ajax_query->have_posts()) : $ajax_query->the_post(); ?>
-            <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 column" <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+            <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 show column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
                 <a href="<?php echo esc_url(get_permalink()); ?>">
 
                 <?php
@@ -129,7 +129,7 @@ if ( ! empty( $categories ) ) {
             if ($ajax_query->have_posts()) :
                 while ($ajax_query->have_posts()) : $ajax_query->the_post(); ?>
 
-            <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
+            <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 show column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
                 <a href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
 $categories = get_the_category();
@@ -191,12 +191,16 @@ if ( ! empty( $categories ) ) {
             if ($ajax_query->have_posts()) :
                 while ($ajax_query->have_posts()) : $ajax_query->the_post(); ?>
 
-            <article class="offset-9 col-3 column <?php $categories = get_the_category();
+            <article class="offset-9 col-3 show column <?php $categories = get_the_category();
                                                                 if (!empty($categories)) {
                                                                     echo esc_html($categories[1]->name);
                                                                 } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
 
                 <a href="<?php echo esc_url(get_permalink()); ?>">
+                <?php $categories = get_the_category();
+                                                                if (!empty($categories)) {
+                                                                    echo esc_html($categories[1]->name);
+                                                                } ?>
                     <div class="content_head">
                         <div class="content_title">
                             <h3 class="title"><?php the_title(); ?></h3>
@@ -253,7 +257,7 @@ if ( ! empty( $categories ) ) {
 
             if ($ajax_query->have_posts()) :
                 while ($ajax_query->have_posts()) : $ajax_query->the_post(); ?>
-            <article class="offset-9 col-3 column <?php $categories = get_the_category();
+            <article class="offset-9 col-3 show column <?php $categories = get_the_category();
                                                                 if (!empty($categories)) {
                                                                     echo esc_html($categories[1]->name);
                                                                 } ?>" style="padding:30px; margin-bottom:20px; background-size:cover; background-repeat:no-repeat; background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
