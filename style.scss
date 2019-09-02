@@ -24,8 +24,10 @@ $text-menu: 24px;
 $text-titre: 20px;
 $text-menu: 36px;
 $text-titre-principal: 100px;
-$segoe: "Segoe UI", sans-serif;
-$roboto: "Roboto", sans-serif;
+$segoe: "Segoe UI",
+sans-serif;
+$roboto: "Roboto",
+sans-serif;
 
 // Règles générales
 
@@ -188,14 +190,17 @@ header {
           // font-size: $text-menu;
           font-size: 60px;
           color: $white;
+
           a {
             color: $white;
             font-family: $segoe;
             text-decoration: none;
+
             @media (max-width: 990px) {
               font-size: 30px;
             }
           }
+
           a:after {
             content: "|";
             margin-left: 15px;
@@ -216,6 +221,7 @@ header {
         width: 100%;
       }
     }
+
     .coordonnees {
       width: 33, 3%;
 
@@ -240,6 +246,7 @@ header {
             font-size: 18px;
           }
         }
+
         .titre_fondateur {
           font-weight: bold;
           padding-top: 29%;
@@ -254,6 +261,7 @@ header {
         }
       }
     }
+
     .siege_contact {
       list-style: none;
       align-items: center;
@@ -282,6 +290,7 @@ header {
           font-size: 23px;
         }
       }
+
       .titre_fondateur {
         font-weight: bold;
       }
@@ -377,6 +386,7 @@ header {
       @media screen and (max-width: 1100px) {
         font-size: 35px;
       }
+
       // @media (min-width: 990px) and (max-width: 1100px) {
       //   font-size: 30px;
       // }
@@ -468,9 +478,9 @@ header {
       padding-bottom: 0;
 
       a:nth-child(2),
-            // espace entre les images pour le support portable
-            a:nth-child(3),
-            a:last-child {
+      // espace entre les images pour le support portable
+      a:nth-child(3),
+      a:last-child {
         margin-top: 60px;
       }
     }
@@ -556,6 +566,7 @@ header {
 //PAGE SPORT ET NATURE
 #sport {
   overflow: hidden;
+
   article {
     min-height: 300px;
     max-height: 300px;
@@ -563,6 +574,7 @@ header {
     margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
+
     a {
       width: 100%;
       height: 100%;
@@ -610,6 +622,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   a {
     width: 100%;
     height: 100%;
@@ -655,6 +668,7 @@ header {
 
 #bien-manger {
   height: 100vh;
+  margin-left: 15px;
 
   .row {
     height: 100%;
@@ -665,6 +679,7 @@ header {
       background-position: center;
       background-repeat: no-repeat;
       margin-bottom: 3.5%;
+      max-width: 65.2%;
 
       a {
         width: 100%;
@@ -784,15 +799,17 @@ header {
         color: $background-vert;
       }
 
-      
+
     }
   }
 
-  .row{
+  .row {
 
-    .article_bien_manger_lateral{
-
+    .article_bien_manger_lateral {
       height: 100%;
+      max-width: 34%;
+      padding-right: 15px;
+      padding-left: 1.2%;
 
       .bien_manger_article_secondaire:first-child {
         margin-bottom: 15px;
@@ -801,11 +818,15 @@ header {
   }
 }
 
-#moreCuisine{
+#moreCuisine {
 
   margin-top: 3.5%;
 
-  .somewhere_cuisine, .a_la_suite_cuisine{
+  .somewhere_cuisine,
+  .a_la_suite_cuisine {
+
+    margin-right: auto;
+    margin-left: auto;
 
     article {
       min-height: 280px;
@@ -814,32 +835,34 @@ header {
       margin-bottom: 20px;
       background-size: cover;
       background-repeat: no-repeat;
-      margin: 0.5%; // 10 px 29px
+      margin-right: 0.6%; // 10 px 29px
+      margin-left: 0.6%;
       max-width: 32% !important;
+
       a {
         width: 100%;
         height: 100%;
         color: white;
-  
+
         .content_head {
           display: flex;
           flex-direction: column;
-  
+
           .content_title {
             padding-top: 10px;
             padding-bottom: 10px;
             padding-left: 40px;
-  
+
             .content_trait {
               width: 150px;
               display: flex;
               justify-content: space-around;
-  
+
               .trait_petit {
                 border-top: 2px $background-vert solid;
                 width: 30px;
               }
-  
+
               .trait_grand {
                 border-top: 2px $background-vert solid;
                 width: 60px;
@@ -847,20 +870,26 @@ header {
             }
           }
         }
-  
+
         // .extrait {
         // }
-  
+
         .datePost {
           padding: 20px 50px;
         }
       }
-      a:hover{
 
-        color:  $background-vert;
+      a:hover {
+
+        color: $background-vert;
       }
     }
   }
+
+  @media (max-width: 1366px) {
+    margin-top: 5%;
+  }
+
 }
 
 // single post
@@ -868,32 +897,32 @@ header {
 #single-post {
 
   .container {
-      .container_menu {
-          background-color: #c0c0c0;
-          color: black;
-      }
+    .container_menu {
+      background-color: #c0c0c0;
+      color: black;
+    }
 
-      .bg_article {
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 1000;
-          margin-top: 33%;
+    .bg_article {
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      margin-top: 33%;
 
-          .row {
+      .row {
 
-              .col-12 {
+        .col-12 {
 
-                  .article_title {
-                      color: white;
-                      text-align: center;
-                  }
-
-                  .article_content {
-                      color: white;
-                      padding: 20px;
-                  }
-              }
+          .article_title {
+            color: white;
+            text-align: center;
           }
+
+          .article_content {
+            color: white;
+            padding: 20px;
+          }
+        }
       }
+    }
   }
 }
 
@@ -955,31 +984,32 @@ footer {
   }
 }
 
-  .column {
-    display: none; /* Hide columns by default */
-  }
-    
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: white;
-    cursor: pointer;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Add a dark background color to the active button */
-  .btn.active {
-    background-color: #666;
-     color: white;
-  }
+.column {
+  display: none;
+  /* Hide columns by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}

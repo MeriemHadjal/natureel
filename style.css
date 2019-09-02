@@ -666,6 +666,7 @@ header .filter {
 
 #bien-manger {
   height: 100vh;
+  margin-left: 15px;
 }
 
 #bien-manger .row {
@@ -678,6 +679,7 @@ header .filter {
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 3.5%;
+  max-width: 65.2%;
 }
 
 #bien-manger .row .bien_manger_article_principal a {
@@ -818,6 +820,9 @@ header .filter {
 
 #bien-manger .row .article_bien_manger_lateral {
   height: 100%;
+  max-width: 34%;
+  padding-right: 15px;
+  padding-left: 1.2%;
 }
 
 #bien-manger .row .article_bien_manger_lateral .bien_manger_article_secondaire:first-child {
@@ -828,24 +833,34 @@ header .filter {
   margin-top: 3.5%;
 }
 
-#moreCuisine .somewhere_cuisine article, #moreCuisine .a_la_suite_cuisine article {
+#moreCuisine .somewhere_cuisine,
+#moreCuisine .a_la_suite_cuisine {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#moreCuisine .somewhere_cuisine article,
+#moreCuisine .a_la_suite_cuisine article {
   min-height: 280px;
   max-height: 280px;
   padding: 30px;
   margin-bottom: 20px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0.5%;
+  margin-right: 0.6%;
+  margin-left: 0.6%;
   max-width: 32% !important;
 }
 
-#moreCuisine .somewhere_cuisine article a, #moreCuisine .a_la_suite_cuisine article a {
+#moreCuisine .somewhere_cuisine article a,
+#moreCuisine .a_la_suite_cuisine article a {
   width: 100%;
   height: 100%;
   color: white;
 }
 
-#moreCuisine .somewhere_cuisine article a .content_head, #moreCuisine .a_la_suite_cuisine article a .content_head {
+#moreCuisine .somewhere_cuisine article a .content_head,
+#moreCuisine .a_la_suite_cuisine article a .content_head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,13 +870,15 @@ header .filter {
           flex-direction: column;
 }
 
-#moreCuisine .somewhere_cuisine article a .content_head .content_title, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title {
+#moreCuisine .somewhere_cuisine article a .content_head .content_title,
+#moreCuisine .a_la_suite_cuisine article a .content_head .content_title {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
 }
 
-#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait {
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait,
+#moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait {
   width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -870,22 +887,32 @@ header .filter {
       justify-content: space-around;
 }
 
-#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_petit, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_petit {
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_petit,
+#moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_petit {
   border-top: 2px #c3d8bb solid;
   width: 30px;
 }
 
-#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_grand, #moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_grand {
+#moreCuisine .somewhere_cuisine article a .content_head .content_title .content_trait .trait_grand,
+#moreCuisine .a_la_suite_cuisine article a .content_head .content_title .content_trait .trait_grand {
   border-top: 2px #c3d8bb solid;
   width: 60px;
 }
 
-#moreCuisine .somewhere_cuisine article a .datePost, #moreCuisine .a_la_suite_cuisine article a .datePost {
+#moreCuisine .somewhere_cuisine article a .datePost,
+#moreCuisine .a_la_suite_cuisine article a .datePost {
   padding: 20px 50px;
 }
 
-#moreCuisine .somewhere_cuisine article a:hover, #moreCuisine .a_la_suite_cuisine article a:hover {
+#moreCuisine .somewhere_cuisine article a:hover,
+#moreCuisine .a_la_suite_cuisine article a:hover {
   color: #c3d8bb;
+}
+
+@media (max-width: 1366px) {
+  #moreCuisine {
+    margin-top: 5%;
+  }
 }
 
 #single-post .container .container_menu {

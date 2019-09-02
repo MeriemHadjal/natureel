@@ -26,17 +26,12 @@ get_header('sport');
 
 
 
-                <div class="bien_manger_article_principal col-8 column <?php $categories = get_the_category();
+                <div class="bien_manger_article_principal col-8 mt column <?php $categories = get_the_category();
                                                                                 if (!empty($categories)) {
                                                                                     echo esc_html($categories[1]->name);
                                                                                 } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
                     <a href="<?php echo esc_url(get_permalink()); ?>">
-                     <?php
-$categories = get_the_category();
- 
-if ( ! empty( $categories ) ) {
-    echo esc_html( $categories[1]->name );   
-} ?>
+
                         <div class="content_title">
                             <h3 class="title"><?php the_title(); ?></h3>
                             <div class="content_trait">
@@ -60,7 +55,7 @@ if ( ! empty( $categories ) ) {
         endif;
         ?>
 
-        <div class="col-4 article_bien_manger_lateral pr-0 pl-20">
+        <div class="col-4 article_bien_manger_lateral pr-0">
             <?php
 
             $post = array(
@@ -85,12 +80,7 @@ if ( ! empty( $categories ) ) {
                                                                                     echo esc_html($categories[1]->name);
                                                                                 } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
                         <a href="<?php echo esc_url(get_permalink()); ?>">
-                            <?php
-                                    $categories = get_the_category();
-
-                                    if (!empty($categories)) {
-                                        echo esc_html($categories[1]->name);
-                                    } ?>
+                         
                             <div class="content_title">
                                 <h3 class="title"><?php the_title(); ?></h3>
                                 <div class="content_trait">
@@ -121,7 +111,7 @@ if ( ! empty( $categories ) ) {
 
 <section id="moreCuisine">
 
-    <div class="row somewhere_cuisine a_la_suite_cuisine">
+    <div class="row somewhere_cuisine a_la_suite_cuisine d-flex justify-content-center">
 
     </div>
 </section>
