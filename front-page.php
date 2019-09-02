@@ -13,7 +13,7 @@ get_header();
             </div>
         </div>
         <div class="content_text row">
-            <div class="col-12 offset-md-1 col-md-4 offset-lg-0 col-lg-6">
+            <div class="col-12 offset-md-1 col-md-4 offset-0 col-lg-6">
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo fugiat esse in possimus deserunt minus saepe,
                     repellat maiores nostrum aut itaque mollitia delectus ipsum debitis? Nobis aut eligendi dolore? Possimus?

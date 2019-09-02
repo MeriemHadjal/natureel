@@ -79,6 +79,9 @@ jQuery.post(
 
 var offsetSport = 1;
 
+// footer = document.querySelector('.footer-sport');
+// listElement = document.querySelector('.a_la_suite_cuisine')
+// dernierElement = listElement.lastChild;
 
 jQuery(window).scroll(function () {
 
