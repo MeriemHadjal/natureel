@@ -60,7 +60,7 @@ function mon_action_cuisine()
     );
 
     $ajax_query = new WP_Query($args);
-
+    
     if ($ajax_query->have_posts()) :
         while ($ajax_query->have_posts()) : $ajax_query->the_post(); ?>
             <article class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 show column <?php $categories = get_the_category(); if ( ! empty( $categories ) ) {echo esc_html( $categories[1]->name );} ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');">
@@ -117,7 +117,7 @@ if ( ! empty( $categories ) ) {
                 'post_type' => 'post', // articles 
                 'posts_per_page' => 3,
                 'cat' => 2,
-                'offset' => $offsetCuisine,
+                'offset' => 3 + $offsetCuisine,
                 'order' => 'DESC', // classé par ordre alphabétique 
                 'orderby' => 'date_post', // par titre 
             );
@@ -158,6 +158,8 @@ if ( ! empty( $categories ) ) {
 
                 </a>
             </article>
+
+            
         <?php endwhile;
             endif;
             die();
@@ -176,6 +178,9 @@ if ( ! empty( $categories ) ) {
 
             // $url = $_SERVER["HTTP_REFERER"];
             // $url = explode("/", $url);
+
+            // $categories = get_the_category();
+            // $categorieName = $categories[1]->name;
 
             $args = array(
                 'post_type' => 'post', // articles 
@@ -222,7 +227,9 @@ if ( ! empty( $categories ) ) {
 
                 </a>
             </article>
-        <?php endwhile;
+        <?php 
+    
+            endwhile;
             endif;
             die();
         }
@@ -237,6 +244,8 @@ if ( ! empty( $categories ) ) {
 
             global $post;
             global $ajax_query;
+            // $categories = get_the_category();
+            // $categorieName = $categories[1]->name;
             $offsetSport = $_POST['offset'];
 
             // $url = $_SERVER["HTTP_REFERER"];
@@ -246,7 +255,7 @@ if ( ! empty( $categories ) ) {
                 'post_type' => 'post', // articles 
                 'posts_per_page' => 1,
                 'cat' => 3,
-                'offset' => $offsetSport,
+                'offset' => 3 + $offsetSport,
                 'order' => 'DESC', // classé par ordre alphabétique 
                 'orderby' => 'date_post', // par titre 
             );
@@ -284,7 +293,11 @@ if ( ! empty( $categories ) ) {
 
                 </a>
             </article>
-<?php endwhile;
+
+<?php 
+            // var_dump($categorieName);
+
+endwhile;
     endif;
     die();
 }

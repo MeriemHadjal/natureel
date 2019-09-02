@@ -677,7 +677,7 @@ header .filter {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 20px;
+  margin-bottom: 3.5%;
 }
 
 #bien-manger .row .bien_manger_article_principal a {
@@ -749,7 +749,7 @@ header .filter {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 20px;
+  margin-bottom: 3.5%;
 }
 
 #bien-manger .row .bien_manger_article_secondaire a {
@@ -820,8 +820,12 @@ header .filter {
   height: 100%;
 }
 
+#bien-manger .row .article_bien_manger_lateral .bien_manger_article_secondaire:first-child {
+  margin-bottom: 15px;
+}
+
 #moreCuisine {
-  margin-top: 20px;
+  margin-top: 3.5%;
 }
 
 #moreCuisine .somewhere_cuisine article, #moreCuisine .a_la_suite_cuisine article {
@@ -831,8 +835,8 @@ header .filter {
   margin-bottom: 20px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 10px 29px;
-  max-width: 30, 333% !important;
+  margin: 0.5%;
+  max-width: 32% !important;
 }
 
 #moreCuisine .somewhere_cuisine article a, #moreCuisine .a_la_suite_cuisine article a {
@@ -959,7 +963,6 @@ footer .container .row a:hover {
   }
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   display: none;
   /* Hide columns by default */

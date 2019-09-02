@@ -60,7 +60,7 @@ if ( ! empty( $categories ) ) {
         endif;
         ?>
 
-        <div class="col-4 article_bien_manger_lateral">
+        <div class="col-4 article_bien_manger_lateral pr-0 pl-20">
             <?php
 
             $post = array(
@@ -121,10 +121,7 @@ if ( ! empty( $categories ) ) {
 
 <section id="moreCuisine">
 
-    <div class="row somewhere_cuisine a_la_suite_cuisine column <?php $categories = get_the_category();
-                                                                                if (!empty($categories)) {
-                                                                                    echo esc_html($categories[1]->name);
-                                                                                } ?>">
+    <div class="row somewhere_cuisine a_la_suite_cuisine">
 
     </div>
 </section>
