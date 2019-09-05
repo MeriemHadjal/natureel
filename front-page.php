@@ -40,8 +40,8 @@ get_header();
 <section id="sports" class="container-fluid">
     <!-- début section sport -->
     <div class="container">
-        <h2>NOS SPORTS</h2>
         <div class="content_title">
+        <h2>NOS SPORTS</h2>
             <div class="content_trait">
                 <div class="trait_petit"></div>
                 <div class="trait_grand"></div>

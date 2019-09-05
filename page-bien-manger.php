@@ -8,8 +8,10 @@ get_header('sport');
         <button class="btn" onclick="filterSelectionCuisine('cuisine spécifique')">spécifique</button>
     </div>
     <div class="row">
-        <?php
 
+        
+
+        <?php
         $post = array(
             'post_type' => 'post',
             'cat' => 2,
@@ -26,7 +28,7 @@ get_header('sport');
 
 
 
-                <div class="bien_manger_article_principal col-12 col-lg-8 column <?php $categories = get_the_category();
+                <div class="bien_manger_article_principal col-12 col-lg-8 show column <?php $categories = get_the_category();
                                                                                 if (!empty($categories)) {
                                                                                     echo esc_html($categories[1]->name);
                                                                                 } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
@@ -73,9 +75,7 @@ get_header('sport');
 
                     ?>
 
-
-
-                    <div class="bien_manger_article_secondaire column <?php $categories = get_the_category();
+                    <div class="bien_manger_article_secondaire show column <?php $categories = get_the_category();
                                                                                 if (!empty($categories)) {
                                                                                     echo esc_html($categories[1]->name);
                                                                                 } ?>" style="background-image: linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)), url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">

@@ -24,7 +24,7 @@ h2 {
   font-size: 80px;
   font-family: "Segoe UI", sans-serif;
   font-weight: medium;
-  color: #665d51;
+  color: #665D51;
   text-align: left;
   padding-top: 80px;
 }
@@ -55,7 +55,7 @@ h2 {
 }
 
 .content_title .content_trait .trait_petit {
-  border-top: 2px #665d51 solid;
+  border-top: 2px #665D51 solid;
   width: 70px;
 }
 
@@ -72,7 +72,7 @@ h2 {
 }
 
 .content_title .content_trait .trait_grand {
-  border-top: 2px #665d51 solid;
+  border-top: 2px #665D51 solid;
   width: 120px;
 }
 
@@ -405,7 +405,7 @@ header .filter {
   margin-top: 50px;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
-  color: #665d51;
+  color: #665D51;
   width: 100%;
   text-align: center;
 }
@@ -416,7 +416,7 @@ header .filter {
 }
 
 #sports #images_sports a img {
-  height: 192px;
+  height: 205px;
   opacity: 0.7;
 }
 
@@ -713,6 +713,18 @@ header .filter {
   font-size: 80px;
 }
 
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_principal a .content_title .title {
+    font-size: 59px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger .row .bien_manger_article_principal a .content_title .title {
+    font-size: 45px;
+  }
+}
+
 #bien-manger .row .bien_manger_article_principal a .content_title .content_trait {
   width: 250px;
   display: -webkit-box;
@@ -733,14 +745,40 @@ header .filter {
 }
 
 #bien-manger .row .bien_manger_article_principal a .extrait {
-  padding-left: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
   font-size: 60px;
+}
+
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_principal a .extrait {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger .row .bien_manger_article_principal a .extrait {
+    font-size: 35px;
+  }
 }
 
 #bien-manger .row .bien_manger_article_principal a .datePost {
   margin-bottom: 15px;
   padding-left: 30px;
   font-size: 40px;
+}
+
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_principal a .datePost {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger .row .bien_manger_article_principal a .datePost {
+    font-size: 20px;
+  }
 }
 
 #bien-manger .row .bien_manger_article_principal a:hover {
@@ -750,6 +788,12 @@ header .filter {
 @media (max-width: 1200px) {
   #bien-manger .row .bien_manger_article_principal {
     width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger .row .bien_manger_article_principal {
+    max-width: 100%;
   }
 }
 
@@ -791,6 +835,18 @@ header .filter {
   font-size: 40px;
 }
 
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_secondaire a .content_title .title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1768px) {
+  #bien-manger .row .bien_manger_article_secondaire a .content_title .title {
+    font-size: 25px;
+  }
+}
+
 #bien-manger .row .bien_manger_article_secondaire a .content_title .content_trait {
   width: 250px;
   display: -webkit-box;
@@ -811,14 +867,36 @@ header .filter {
 }
 
 #bien-manger .row .bien_manger_article_secondaire a .extrait {
-  padding-left: 200px;
   font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_secondaire a .extrait {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1768px) {
+  #bien-manger .row .bien_manger_article_secondaire a .extrait {
+    font-size: 18px;
+  }
 }
 
 #bien-manger .row .bien_manger_article_secondaire a .datePost {
   margin-bottom: 15px;
-  padding-left: 30px;
   font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+@media (max-width: 1440px) {
+  #bien-manger .row .bien_manger_article_secondaire a .datePost {
+    font-size: 16px;
+  }
 }
 
 #bien-manger .row .bien_manger_article_secondaire a:hover {
@@ -836,9 +914,37 @@ header .filter {
   margin-bottom: 3%;
 }
 
+@media (max-width: 768px) {
+  #bien-manger .row .article_bien_manger_lateral .bien_manger_article_secondaire {
+    width: 100%;
+    margin: 0 5px;
+    max-height: 280px;
+    min-height: 280px;
+  }
+}
+
 @media (max-width: 1200px) {
   #bien-manger .row .article_bien_manger_lateral {
     width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger .row .article_bien_manger_lateral {
+    max-width: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #bien-manger {
+    height: initial;
   }
 }
 
@@ -856,13 +962,13 @@ header .filter {
 #moreCuisine .a_la_suite_cuisine article {
   min-height: 280px;
   max-height: 280px;
-  padding: 30px;
   margin-bottom: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 0.6%;
   margin-left: 0.6%;
   max-width: 32%;
+  padding: 0;
 }
 
 #moreCuisine .somewhere_cuisine article a,
@@ -870,6 +976,17 @@ header .filter {
   width: 100%;
   height: 100%;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #moreCuisine .somewhere_cuisine article a .content_head,
@@ -912,6 +1029,13 @@ header .filter {
   width: 60px;
 }
 
+#moreCuisine .somewhere_cuisine article a .extrait,
+#moreCuisine .a_la_suite_cuisine article a .extrait {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
 #moreCuisine .somewhere_cuisine article a .datePost,
 #moreCuisine .a_la_suite_cuisine article a .datePost {
   padding: 20px 50px;
@@ -920,6 +1044,25 @@ header .filter {
 #moreCuisine .somewhere_cuisine article a:hover,
 #moreCuisine .a_la_suite_cuisine article a:hover {
   color: #c3d8bb;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  #moreCuisine .somewhere_cuisine article,
+  #moreCuisine .a_la_suite_cuisine article {
+    max-width: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  #moreCuisine .somewhere_cuisine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -947,6 +1090,90 @@ header .filter {
 #single-post .container .bg_article .row .col-12 .article_content {
   color: white;
   padding: 20px;
+}
+
+#single_post_evenement .container .container_menu {
+  background-color: #c0c0c0;
+  color: black;
+}
+
+#single_post_evenement .container .bg_article {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+#single_post_evenement .container .bg_article .row .col-12 .article_title,
+#single_post_evenement .container .bg_article .row .col-12 .article_content,
+#single_post_evenement .container .bg_article .row .col-12 .article_evenement {
+  color: white;
+}
+
+#single_post_evenement .container .bg_article .row .col-12 .article_title {
+  text-align: center;
+}
+
+#single_post_evenement .container .bg_article .row .col-12 .article_content {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  height: auto;
+}
+
+#page_actualites .row {
+  border: yellow 1px solid;
+}
+
+#page_actualites .row .fa-arrow-right, #page_actualites .row .fa-arrow-left {
+  font-size: 45px;
+  margin-top: 32%;
+}
+
+#page_actualites .row section {
+  margin: 60px 0;
+  width: 100%;
+  border: solid 1px #0000ff;
+  overflow: hidden;
+}
+
+#page_actualites .row section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#page_actualites .row section .content_actualites .actualites ul .informations {
+  width: 85%;
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin-top: 40px;
+}
+
+#page_actualites .row section .content_actualites .actualites ul .informations:first-child {
+  margin-top: 80px;
+}
+
+#page_actualites .row section .content_evenements {
+  border: 1px solid magenta;
+  width: 300%;
+  height: 250px;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+#page_actualites .row section .content_evenements .slide {
+  width: 33.33%;
+  border: 1px solid red;
+}
+
+#page_actualites .row section .content_evenements .slide .evenements {
+  border: 1px solid #665D51;
+  width: 33.33%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin-left: 2px;
 }
 
 footer {
@@ -1001,6 +1228,10 @@ footer .container .row a:hover {
     background-color: #222421;
     background-image: none;
   }
+}
+
+#footer-post {
+  background-image: url(assets/img/background-footer-dechire-post.png);
 }
 
 .column {

@@ -22,5 +22,5 @@ get_header('article');
     <?php endwhile; ?>
 <?php endif; ?>
 <?php
-get_footer();
+get_footer('post');
 ?>
